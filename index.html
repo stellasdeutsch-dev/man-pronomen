@@ -74,7 +74,7 @@ p{margin:0 0 14px}
 .deco{position:absolute;pointer-events:none;z-index:0;filter:drop-shadow(0 18px 22px rgba(6,16,90,.35))}
 .float{animation:float 7s ease-in-out infinite}
 .float.d2{animation-duration:9s;animation-delay:-3s}
-@keyframes float{0%,100%{transform:translateY(0) rotate(var(--rot,0deg))}50%{transform:translateY(-14px) rotate(calc(var(--rot,0deg) + 4deg))}}
+@keyframes float{0%,100%{transform:translateY(var(--py,0px)) rotate(var(--rot,0deg))}50%{transform:translateY(calc(var(--py,0px) - 14px)) rotate(calc(var(--rot,0deg) + 4deg))}}
 
 /* ---------- HERO ---------- */
 .hero{padding-block:34px 70px;position:relative;overflow:visible}
@@ -298,7 +298,7 @@ p{margin:0 0 14px}
 .stage-cap b{display:block;font:700 26px/1 var(--display);text-transform:uppercase;color:var(--white);margin-bottom:8px}
 
 .phone-row{display:grid;gap:26px;align-items:center;margin-top:50px}
-.phone{justify-self:center;width:min(78vw,290px);border-radius:46px;padding:12px;background:linear-gradient(150deg,#fff,#dfe6fb 60%,#c3cff4);box-shadow:0 50px 70px -30px rgba(3,8,50,.9),inset 0 2px 0 #fff;transform:rotate(5deg);position:relative}
+.phone{justify-self:center;width:min(78vw,290px);border-radius:46px;padding:12px;background:linear-gradient(150deg,#fff,#dfe6fb 60%,#c3cff4);box-shadow:0 50px 70px -30px rgba(3,8,50,.9),inset 0 2px 0 #fff;--rz:5deg;position:relative}
 .phone video{width:100%;aspect-ratio:858/1352;object-fit:cover;border-radius:36px;background:#fff}
 .phone .tag{position:absolute;background:var(--white);color:var(--blue);border-radius:999px;padding:9px 14px;font:800 11px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;box-shadow:0 14px 24px -12px rgba(6,16,90,.7);transform:rotate(-5deg)}
 .phone .t1{left:-26px;top:18%}.phone .t2{right:-20px;top:46%;background:var(--peach);color:var(--cocoa)}.phone .t3{left:-14px;bottom:14%}
@@ -374,6 +374,71 @@ p{margin:0 0 14px}
 .rv.in{animation:settle .7s cubic-bezier(.2,.9,.3,1)}
 @keyframes settle{from{transform:translateY(22px) scale(.985)}to{transform:none}}
 
+/* ---------- extra motion & visuals ---------- */
+.progress{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);height:4px;z-index:30;pointer-events:none}
+.progress i{display:block;height:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--peach),var(--white))}
+
+.tilt{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) rotate(var(--rz,0deg));transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+
+.puff{transform-box:fill-box;transform-origin:center;animation:puff 2.8s ease-out infinite}
+.puff.p2{animation-delay:.9s}.puff.p3{animation-delay:1.8s}
+@keyframes puff{0%{transform:translate(0,0) scale(.4);opacity:.95}100%{transform:translate(8px,-38px) scale(1.7);opacity:0}}
+
+.hero .deco.plane{right:-18px;top:60px;width:96px;--rot:-10deg}
+.hero .deco.bfly{left:-26px;bottom:6px;width:92px;--rot:14deg}
+
+/* marquee ribbons */
+.marquee{width:calc(100vw + 80px);margin-left:calc(50% - 50vw - 40px);overflow:hidden;background:var(--white);padding-block:16px;transform:rotate(-2.2deg);box-shadow:0 24px 40px -24px rgba(3,8,50,.8);position:relative;z-index:2}
+.marquee.alt{background:var(--peach);transform:rotate(1.8deg)}
+.mq-track{display:flex;width:max-content;animation:mq 28s linear infinite}
+.marquee.alt .mq-track{animation-direction:reverse;animation-duration:22s}
+.mq-track span{font:700 clamp(34px,9vw,64px)/1 var(--display);text-transform:uppercase;color:var(--blue);padding-inline:16px;white-space:nowrap}
+.mq-track span.o{color:transparent;-webkit-text-stroke:2px var(--blue)}
+.marquee.alt .mq-track span{color:var(--cocoa)}.marquee.alt .mq-track span.o{color:transparent;-webkit-text-stroke-color:var(--cocoa)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* story scene */
+.scene{width:100%;height:auto;margin:0 0 24px;display:block}
+.scene .dog{animation:walk 12s linear infinite}
+@keyframes walk{from{transform:translateX(-80px)}to{transform:translateX(400px)}}
+.scene .hm{animation:peek 6s ease-in-out infinite}
+@keyframes peek{0%,15%{transform:translateX(-30px)}30%,82%{transform:none}100%{transform:translateX(-30px)}}
+.scene .bub{transform-box:fill-box;transform-origin:0% 100%;animation:bubble 6s ease-in-out infinite}
+@keyframes bubble{0%,32%{transform:scale(0)}42%,76%{transform:scale(1)}84%,100%{transform:scale(0)}}
+
+/* heading character rise */
+.split .w{display:inline-block;white-space:nowrap}
+.split .c{display:inline-block}
+.split.go .c{animation:crise .7s cubic-bezier(.2,.9,.25,1) backwards;animation-delay:calc(var(--i) * 28ms)}
+@keyframes crise{from{transform:translateY(.55em) rotate(6deg);opacity:0}to{transform:none;opacity:1}}
+
+/* rotating "who" chip */
+.who-rot{display:inline-flex;align-items:center;gap:12px;background:var(--white);color:var(--ink);border-radius:999px;padding:12px 22px 12px 14px;font:700 20px/1 var(--body);box-shadow:var(--shadow);margin:6px 0 4px;justify-self:start}
+.who-rot .m{color:var(--cocoa);background:var(--peach);border-radius:999px;padding:7px 12px}
+.rot{display:inline-grid;perspective:400px;color:var(--blue);min-width:4.6em}
+.rot b{grid-area:1/1;transition:transform .55s cubic-bezier(.3,1.3,.5,1),opacity .3s;transform:rotateX(90deg);opacity:0}
+.rot b.on{transform:none;opacity:1}
+#s2 .deco{right:-20px;top:20px;width:92px;--rot:8deg}
+#s5 .deco{left:-24px;top:10px;width:96px;--rot:-12deg}
+#s6 .deco{right:-10px;top:30px;width:80px;--rot:10deg}
+#s3 .deco{left:-30px;bottom:40px;width:86px;--rot:-18deg}
+
+/* confetti */
+.cf{position:absolute;width:10px;height:10px;border-radius:3px;pointer-events:none;z-index:5;animation:cf .9s cubic-bezier(.2,.8,.3,1) forwards}
+@keyframes cf{from{transform:translate(0,0) rotate(0)}to{transform:translate(var(--dx),var(--dy)) rotate(var(--dr));opacity:0}}
+
+/* wheel */
+.wheel-sec{text-align:center}
+.wheel{width:min(90vw,440px);aspect-ratio:1;margin:0 auto;position:relative}
+.wheel svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 30px 36px rgba(3,8,50,.55))}
+#wheelRot{transform-origin:160px 160px;transition:transform 3.6s cubic-bezier(.12,.9,.18,1)}
+.ring-dots{transform-origin:160px 160px;animation:spin 50s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.wheel-out{max-width:420px;margin:22px auto 0;display:grid;gap:14px;justify-items:center}
+.wheel-res{background:var(--white);color:var(--ink);border-radius:22px;padding:16px 20px;min-height:4.6em;box-shadow:var(--shadow);width:100%}
+.wheel-res b{display:block;font:700 26px/1 var(--display);text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.wheel-res.flash{animation:settle .6s cubic-bezier(.3,1.4,.5,1)}
+
 /* ---------- ≥ 760px ---------- */
 @media (min-width:760px){
   .page{padding-inline:32px}
@@ -419,10 +484,13 @@ p{margin:0 0 14px}
   </defs>
 </svg>
 
+<div class="progress" aria-hidden="true"><i id="prog"></i></div>
 <div class="page">
 
 <!-- ============ HERO ============ -->
 <header class="hero">
+  <svg class="deco plane float" aria-hidden="true"><use href="#plane"/></svg>
+  <svg class="deco bfly float d2" aria-hidden="true" data-sp=".14"><use href="#bfly"/></svg>
   <div class="topbar">
     <a class="brand" href="#top" id="top"><img src="media/logo.png" alt="">Stellas</a>
     <span class="chip">Немецкий · A1</span>
@@ -439,8 +507,8 @@ p{margin:0 0 14px}
       </div>
     </div>
     <div class="sign-wrap">
-      <div class="sign" role="img" aria-label="Табличка: Hier raucht man nicht">
-        <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#fff" stroke="#e2543a" stroke-width="9"/><rect x="18" y="52" width="52" height="12" rx="2" fill="#1a2f96"/><rect x="72" y="52" width="9" height="12" fill="#F5C8A9"/><path d="M76 46c0-8 6-8 6-16" fill="none" stroke="#87AFEA" stroke-width="4" stroke-linecap="round"/><path d="M20 20 80 80" stroke="#e2543a" stroke-width="9"/></svg>
+      <div class="sign tilt" role="img" aria-label="Табличка: Hier raucht man nicht">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#fff" stroke="#e2543a" stroke-width="9"/><rect x="18" y="52" width="52" height="12" rx="2" fill="#1a2f96"/><rect x="72" y="52" width="9" height="12" fill="#F5C8A9"/><circle class="puff" cx="78" cy="44" r="5" fill="#c9d6fb"/><circle class="puff p2" cx="78" cy="44" r="5" fill="#c9d6fb"/><circle class="puff p3" cx="78" cy="44" r="5" fill="#c9d6fb"/><path d="M20 20 80 80" stroke="#e2543a" stroke-width="9"/></svg>
         <div class="t">Hier raucht <em>man</em> nicht</div>
         <p class="ru">Табличка в моём подъезде</p>
       </div>
@@ -448,10 +516,27 @@ p{margin:0 0 14px}
   </div>
 </header>
 
+<div class="marquee" aria-hidden="true"><div class="mq-track"><span>man isst</span><span class="o">man darf</span><span>man kann</span><span class="o">man muss</span><span>man soll</span><span class="o">man spricht</span> <span>man isst</span><span class="o">man darf</span><span>man kann</span><span class="o">man muss</span><span>man soll</span><span class="o">man spricht</span></div></div>
+
 <!-- ============ STORY ============ -->
 <section class="sec story" id="story">
   <div class="card rv">
     <svg class="deco float" aria-hidden="true"><use href="#plane"/></svg>
+    <svg class="scene" viewBox="0 0 320 170" role="img" aria-label="Подъезд: табличка, хаусмайстер, курильщик и такса">
+      <rect width="320" height="170" rx="22" fill="#eef2ff"/>
+      <rect y="140" width="320" height="30" fill="#dde5fb"/>
+      <g class="hm"><use href="#person" x="98" y="72" width="30" height="68" fill="#2A52B2"/><rect x="101" y="68" width="24" height="8" rx="4" fill="#1a2f96"/></g>
+      <rect x="30" y="34" width="72" height="106" rx="6" fill="#1f3fd4"/>
+      <rect x="42" y="46" width="48" height="34" rx="4" fill="#87AFEA"/>
+      <circle cx="90" cy="96" r="4" fill="#F5C8A9"/>
+      <g class="bub"><rect x="128" y="86" width="50" height="26" rx="12" fill="#fff" stroke="#c9d5f7"/><path d="M134 108l-8 10 14-6z" fill="#fff"/><text x="153" y="104" text-anchor="middle" font-family="Oswald,Arial Narrow,sans-serif" font-weight="700" font-size="14" fill="#1f3fd4">MAN!</text></g>
+      <rect x="136" y="30" width="58" height="42" rx="9" fill="#fff" stroke="#c9d5f7"/>
+      <circle cx="165" cy="51" r="14" fill="#fff" stroke="#e2543a" stroke-width="4"/><rect x="155" y="49" width="16" height="5" fill="#1a2f96"/><path d="M155 41l20 20" stroke="#e2543a" stroke-width="4"/>
+      <use href="#person" x="236" y="72" width="30" height="68" fill="#87AFEA"/>
+      <rect x="228" y="100" width="14" height="4" rx="2" fill="#F5C8A9"/>
+      <circle class="puff" cx="228" cy="98" r="4" fill="#c9d6fb"/><circle class="puff p2" cx="228" cy="98" r="4" fill="#c9d6fb"/><circle class="puff p3" cx="228" cy="98" r="4" fill="#c9d6fb"/>
+      <g class="dog"><use href="#dog" x="0" y="140" width="46" height="25" fill="#8b5a3c"/></g>
+    </svg>
     <p class="kicker">История</p>
     <div class="story-lines">
       <p>Я переехал в Австрию. Снял квартиру. В подъезде висела табличка.</p>
@@ -501,12 +586,14 @@ p{margin:0 0 14px}
 
 <!-- ============ STEP 2: FLIPS ============ -->
 <section class="sec" id="s2">
+  <svg class="deco float" aria-hidden="true"><use href="#plane"/></svg>
   <div class="step-head">
     <span class="step-no">Шаг 2</span>
     <h2 class="h2">Кто это сделал? Неважно</h2>
     <div class="dan">
       <p>В русском мы про таких людей не говорим. Ставим глагол во множественное число и делаем вид, что это какие-то «они».</p>
       <p>Кто говорит в Швейцарии по-немецки? Кто-то. А может, все. Мы не знаем. Нам и не надо. Для этого немцы держат man.</p>
+      <div class="who-rot"><span class="m">man</span>=<span class="rot" aria-live="off"><b class="on">кто-то</b><b>все</b><b>люди</b><b>они</b></span></div>
       <p class="muted" style="color:var(--on-blue-soft)!important">Тапни карточку, чтобы перевернуть.</p>
     </div>
   </div>
@@ -540,6 +627,7 @@ p{margin:0 0 14px}
 
 <!-- ============ STEP 3: CONJUGATION ============ -->
 <section class="sec" id="s3">
+  <svg class="deco float d2" aria-hidden="true"><use href="#bfly"/></svg>
   <div class="two">
     <div class="step-head">
       <span class="step-no">Шаг 3</span>
@@ -604,6 +692,7 @@ p{margin:0 0 14px}
 
 <!-- ============ STEP 5: SIGNS + BUILDER ============ -->
 <section class="sec" id="s5">
+  <svg class="deco float" aria-hidden="true"><use href="#bfly"/></svg>
   <div class="step-head">
     <span class="step-no">Шаг 5</span>
     <h2 class="h2">Man и таблички</h2>
@@ -649,6 +738,7 @@ p{margin:0 0 14px}
 
 <!-- ============ STEP 6: QUIZ ============ -->
 <section class="sec" id="s6">
+  <svg class="deco float d2" aria-hidden="true"><use href="#mic"/></svg>
   <div class="two">
     <div class="step-head">
       <span class="step-no">Шаг 6</span>
@@ -736,13 +826,32 @@ p{margin:0 0 14px}
 
   <div class="stats">
     <div class="card bigstat rv">
-      <span class="n">340+</span><span class="d">гайдов от A0 до C1. Грамматика, лексика, реальные фразы.</span>
+      <span class="n" data-to="340">340+</span><span class="d">гайдов от A0 до C1. Грамматика, лексика, реальные фразы.</span>
       <div class="mini">
-        <div><b>7500+</b>слов с озвучкой</div>
-        <div><b>100+</b>студентов в наших разговорных клубах</div>
+        <div><b data-to="7500">7500+</b>слов с озвучкой</div>
+        <div><b data-to="100">100+</b>студентов в наших разговорных клубах</div>
         <div><b>5</b>экзаменов: Goethe, telc, ÖSD, DTZ, TestDaF</div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="sec wheel-sec" id="wheelSec">
+  <p class="kicker">Крути</p>
+  <h2 class="h2">Всё в одном круге</h2>
+  <div class="wheel">
+    <svg viewBox="0 0 320 320" aria-hidden="true">
+      <g class="ring-dots" id="ringDots"></g>
+      <circle cx="160" cy="160" r="142" fill="none" stroke="#e8c39a" stroke-width="10"/>
+      <g id="wheelRot"></g>
+      <circle cx="160" cy="160" r="52" fill="#FBE8DA" stroke="#fff" stroke-width="6"/>
+      <text x="160" y="168" text-anchor="middle" font-family="Oswald,Arial Narrow,sans-serif" font-weight="700" font-size="24" fill="#1f3fd4" letter-spacing="1">STELLAS</text>
+      <path d="M318 160l-30-17v34z" fill="#FBE8DA" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div class="wheel-out">
+    <div class="wheel-res" id="wheelRes" aria-live="polite"><b>Что выпадет?</b>Крути колесо — покажем, что лежит в этом секторе платформы.</div>
+    <button class="btn btn-peach" id="wheelBtn">Крутить</button>
   </div>
 </section>
 
@@ -761,7 +870,7 @@ p{margin:0 0 14px}
   </div>
 
   <div class="phone-row">
-    <div class="phone rv">
+    <div class="phone tilt rv">
       <video muted loop playsinline preload="none" poster="media/app.jpg" class="lazyv"><source src="media/app.mp4" type="video/mp4"></video>
       <span class="tag t1">der · die · das</span>
       <span class="tag t2">озвучка</span>
@@ -797,17 +906,17 @@ p{margin:0 0 14px}
   <h2 class="h2" style="text-align:center">Для кого</h2>
   <div class="whom">
     <div class="wh rv">
-      <div class="orb"><svg class="main" viewBox="0 0 80 80" aria-hidden="true"><path d="M10 38 40 12l30 26v32H10Z" fill="#fff" stroke="#1f3fd4" stroke-width="5" stroke-linejoin="round"/><rect x="32" y="48" width="16" height="22" fill="#1f3fd4"/><rect x="50" y="42" width="10" height="10" fill="#87AFEA"/></svg><span class="bub b1">DE</span><span class="bub b2">AT</span></div>
+      <div class="orb tilt"><svg class="main" viewBox="0 0 80 80" aria-hidden="true"><path d="M10 38 40 12l30 26v32H10Z" fill="#fff" stroke="#1f3fd4" stroke-width="5" stroke-linejoin="round"/><rect x="32" y="48" width="16" height="22" fill="#1f3fd4"/><rect x="50" y="42" width="10" height="10" fill="#87AFEA"/></svg><span class="bub b1">DE</span><span class="bub b2">AT</span></div>
       <h4>Уже живёшь там</h4>
       <p>Германия, Австрия, Швейцария. Хочешь говорить с людьми, а не показывать на всё пальцем.</p>
     </div>
     <div class="wh rv">
-      <div class="orb"><svg class="main" viewBox="0 0 80 80" aria-hidden="true"><rect x="16" y="8" width="48" height="64" rx="8" fill="#fff" stroke="#1f3fd4" stroke-width="5"/><path d="M26 26h28M26 38h28M26 50h16" stroke="#87AFEA" stroke-width="5" stroke-linecap="round"/><path d="m44 58 6 6 12-14" fill="none" stroke="#F5C8A9" stroke-width="6" stroke-linecap="round"/></svg><span class="bub b1">B1</span><span class="bub b2">C1</span></div>
+      <div class="orb tilt"><svg class="main" viewBox="0 0 80 80" aria-hidden="true"><rect x="16" y="8" width="48" height="64" rx="8" fill="#fff" stroke="#1f3fd4" stroke-width="5"/><path d="M26 26h28M26 38h28M26 50h16" stroke="#87AFEA" stroke-width="5" stroke-linecap="round"/><path d="m44 58 6 6 12-14" fill="none" stroke="#F5C8A9" stroke-width="6" stroke-linecap="round"/></svg><span class="bub b1">B1</span><span class="bub b2">C1</span></div>
       <h4>Идёшь на экзамен</h4>
       <p>Goethe, telc, ÖSD, DTZ, TestDaF. Темы, формат и лексика в одном месте.</p>
     </div>
     <div class="wh rv">
-      <div class="orb"><svg class="main" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 70V38" stroke="#1f3fd4" stroke-width="6" stroke-linecap="round"/><path d="M40 42C40 24 28 16 14 16c0 16 10 26 26 26Z" fill="#87AFEA"/><path d="M40 36c0-14 10-22 24-22 0 14-10 22-24 22Z" fill="#1f3fd4"/><rect x="24" y="66" width="32" height="8" rx="4" fill="#F5C8A9"/></svg><span class="bub b1">A0</span><span class="bub b2">A1</span></div>
+      <div class="orb tilt"><svg class="main" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 70V38" stroke="#1f3fd4" stroke-width="6" stroke-linecap="round"/><path d="M40 42C40 24 28 16 14 16c0 16 10 26 26 26Z" fill="#87AFEA"/><path d="M40 36c0-14 10-22 24-22 0 14-10 22-24 22Z" fill="#1f3fd4"/><rect x="24" y="66" width="32" height="8" rx="4" fill="#F5C8A9"/></svg><span class="bub b1">A0</span><span class="bub b2">A1</span></div>
       <h4>Начинаешь с нуля</h4>
       <p>Алфавит, произношение, первые фразы. Без таблиц на три экрана.</p>
     </div>
@@ -831,10 +940,12 @@ p{margin:0 0 14px}
   <p class="swipe">Листай вбок →</p>
 </section>
 
+<div class="marquee alt" aria-hidden="true"><div class="mq-track"><span>A0</span><span class="o">A1</span><span>A2</span><span class="o">B1</span><span>B2</span><span class="o">C1</span><span>навсегда</span> <span>A0</span><span class="o">A1</span><span>A2</span><span class="o">B1</span><span>B2</span><span class="o">C1</span><span>навсегда</span></div></div>
+
 <section class="sec" id="price">
   <h2 class="h2" style="text-align:center">Варианты доступа</h2>
   <div class="plans">
-    <div class="plan rv">
+    <div class="plan tilt rv">
       <h4>A0 — A2</h4><p class="for">С нуля до уверенной базы</p>
       <ul>
         <li>Гайды A0–A2: объяснение, видео, упражнения с разбором</li>
@@ -848,7 +959,7 @@ p{margin:0 0 14px}
       <div class="price">20 €</div><p class="price-note">один раз · навсегда</p>
       <a class="btn btn-peach btn-wide" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Выбрать</a>
     </div>
-    <div class="plan best rv">
+    <div class="plan best tilt rv">
       <span class="badge">Выгоднее всего</span>
       <h4>A0 — C1</h4><p class="for">Весь путь целиком</p>
       <ul>
@@ -863,7 +974,7 @@ p{margin:0 0 14px}
       <div class="price">30 €<s>40 €</s></div><p class="price-note">один раз · навсегда</p>
       <a class="btn btn-peach btn-wide" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Забрать всё</a>
     </div>
-    <div class="plan rv">
+    <div class="plan tilt rv">
       <h4>B1 — C1</h4><p class="for">Для тех, кто уже в теме</p>
       <ul>
         <li>Гайды B1–C1: объяснение, видео, упражнения с разбором</li>
@@ -1098,7 +1209,7 @@ p{margin:0 0 14px}
     const q=Q[qi], all=$$('.opt',opts);
     all.forEach(x=>x.disabled=true);
     all[q.a].classList.add('right');
-    if(i===q.a){ score++; fb.innerHTML=`<b>${good[qi]}</b> ${q.ex}`; }
+    if(i===q.a){ score++; fb.innerHTML=`<b>${good[qi]}</b> ${q.ex}`; if(window.__burst) window.__burst(b); }
     else { b.classList.add('wrong'); fb.innerHTML=`<b>${bad[qi]}</b> ${q.ex}`; }
     const g=qtext.querySelector('.gap'); if(g) g.textContent=q.o[q.a];
     qbar.style.width=((qi+1)/Q.length*100)+'%';
@@ -1146,6 +1257,131 @@ p{margin:0 0 14px}
     sticky.classList.toggle('show', a<innerHeight*.4 && p>innerHeight*.9);
   }
   addEventListener('scroll',st,{passive:true}); st();
+
+  /* ===== extra motion ===== */
+  const onView=(els,fn,opt)=>{
+    if(!('IntersectionObserver' in window)){ els.forEach(fn); return; }
+    const o=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ fn(e.target); o.unobserve(e.target);} }),opt||{threshold:.3});
+    els.forEach(el=>o.observe(el));
+  };
+
+  /* scroll progress + parallax decor */
+  const prog=$('#prog'), decos=$$('.deco');
+  let ticking=false;
+  function frame(){
+    ticking=false;
+    const h=document.documentElement.scrollHeight-innerHeight;
+    prog.style.transform=`scaleX(${h>0?scrollY/h:0})`;
+    if(RM) return;
+    const mid=innerHeight/2;
+    decos.forEach(d=>{
+      const r=d.getBoundingClientRect(); if(r.bottom<-200||r.top>innerHeight+200) return;
+      const sp=+(d.dataset.sp||.1);
+      d.style.setProperty('--py', ((r.top+r.height/2-mid)*-sp).toFixed(1)+'px');
+    });
+  }
+  addEventListener('scroll',()=>{ if(!ticking){ ticking=true; requestAnimationFrame(frame); } },{passive:true});
+  frame();
+
+  /* 3D tilt on fine pointers */
+  if(!RM && matchMedia('(hover:hover) and (pointer:fine)').matches){
+    $$('.tilt').forEach(el=>{
+      el.addEventListener('pointermove',e=>{
+        const r=el.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+        el.style.setProperty('--ry',(x*12).toFixed(2)+'deg'); el.style.setProperty('--rx',(-y*12).toFixed(2)+'deg');
+      });
+      el.addEventListener('pointerleave',()=>{ el.style.setProperty('--rx','0deg'); el.style.setProperty('--ry','0deg'); });
+    });
+  }
+
+  /* headings: characters rise on entry */
+  if(!RM){
+    const hs=$$('.h2').filter(h=>h.getBoundingClientRect().top>innerHeight*.8);
+    hs.forEach(h=>{
+      const text=h.textContent; h.setAttribute('aria-label',text); let n=0;
+      h.innerHTML=text.split(' ').map(w=>'<span class="w" aria-hidden="true">'+[...w].map(c=>`<span class="c" style="--i:${n++}">${c}</span>`).join('')+'</span>').join(' ');
+      h.classList.add('split');
+    });
+    onView(hs,h=>h.classList.add('go'),{threshold:.5});
+  }
+
+  /* rotating "man = ..." */
+  const rb=$$('.rot b'); let ri=0;
+  if(rb.length && !RM) setInterval(()=>{ rb[ri].classList.remove('on'); ri=(ri+1)%rb.length; rb[ri].classList.add('on'); },1600);
+
+  /* step 1 plays itself once when it comes into view */
+  let userMorphed=false;
+  mBtn.addEventListener('click',()=>{ userMorphed=true; },{capture:true});
+  onView([morph],()=>{
+    if(RM) return;
+    [1,2,3].forEach((n,k)=>setTimeout(()=>{ if(!userMorphed) setMorph(n); },1300*(k+1)));
+  },{threshold:.6});
+
+  /* count-up */
+  onView($$('[data-to]'),el=>{
+    if(RM) return;
+    const to=+el.dataset.to, t0=performance.now(), dur=1400;
+    const tick=t=>{ const k=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-k,3); el.textContent=Math.round(to*e)+'+'; if(k<1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  },{threshold:.6});
+
+  /* confetti on right answers */
+  const quizCard=$('#quiz');
+  window.__burst=(btn)=>{
+    if(RM) return;
+    const qr=quizCard.getBoundingClientRect(), br=btn.getBoundingClientRect();
+    const x=br.left-qr.left+br.width*.5, y=br.top-qr.top+br.height*.5;
+    const cols=['#F5C8A9','#1f3fd4','#87AFEA','#FBE8DA','#2A52B2'];
+    for(let i=0;i<18;i++){
+      const c=document.createElement('span'); c.className='cf';
+      const a=Math.random()*Math.PI*2, d=60+Math.random()*90;
+      c.style.cssText=`left:${x}px;top:${y}px;background:${cols[i%5]};--dx:${Math.cos(a)*d}px;--dy:${Math.sin(a)*d-40}px;--dr:${Math.random()*540-270}deg`;
+      quizCard.appendChild(c); setTimeout(()=>c.remove(),950);
+    }
+  };
+
+  /* wheel */
+  const SEG=[
+    {t:'Грамматика',c:'#2A52B2',tc:'#fff',d:'340+ гайдов по порядку, от алфавита до C1. Объяснение, видео, упражнения с разбором.'},
+    {t:'Озвучка',c:'#FBE8DA',tc:'#1f3fd4',d:'7500+ слов с озвучкой и транскрипцией. Немецкий учится ушами.'},
+    {t:'Экзамены',c:'#1f3fd4',tc:'#fff',d:'Goethe, telc, ÖSD, DTZ, TestDaF. Формат, темы, лексика.'},
+    {t:'ИИ-чат',c:'#87AFEA',tc:'#fff',d:'В Gemini-гайдах собеседник отвечает по-немецки в образе. Практика без преподавателя.'},
+    {t:'Трекер',c:'#ffffff',tc:'#1f3fd4',d:'Ставишь цель, проходишь темы, видишь прогресс.'},
+    {t:'Фильмы',c:'#F5C8A9',tc:'#8b5a3c',d:'Фильмы, книги, подкасты. Уже рассортированы по уровню.'}
+  ];
+  const wr=$('#wheelRot'), NS='http://www.w3.org/2000/svg', C=160, R=132;
+  const pt=(a,r)=>[C+r*Math.cos(a*Math.PI/180), C+r*Math.sin(a*Math.PI/180)];
+  SEG.forEach((s,i)=>{
+    const a0=-90+60*i, a1=a0+60, [x0,y0]=pt(a0,R), [x1,y1]=pt(a1,R);
+    const p=document.createElementNS(NS,'path');
+    p.setAttribute('d',`M${C} ${C}L${x0.toFixed(2)} ${y0.toFixed(2)}A${R} ${R} 0 0 1 ${x1.toFixed(2)} ${y1.toFixed(2)}Z`);
+    p.setAttribute('fill',s.c); p.setAttribute('stroke','#fff'); p.setAttribute('stroke-width','2');
+    wr.appendChild(p);
+    const t=document.createElementNS(NS,'text'), mid=a0+30;
+    t.setAttribute('transform',`rotate(${mid} ${C} ${C}) translate(${C+94} ${C+5})`);
+    t.setAttribute('text-anchor','middle'); t.setAttribute('font-family','Oswald,Arial Narrow,sans-serif');
+    t.setAttribute('font-weight','700'); t.setAttribute('font-size', s.t.length>8?'12.5':'15'); t.setAttribute('fill',s.tc);
+    t.textContent=s.t.toUpperCase(); wr.appendChild(t);
+  });
+  const rd=$('#ringDots');
+  for(let i=0;i<36;i++){ const [x,y]=pt(i*10,152), c=document.createElementNS(NS,'circle'); c.setAttribute('cx',x.toFixed(1)); c.setAttribute('cy',y.toFixed(1)); c.setAttribute('r',i%3?2:3.5); c.setAttribute('fill','#ffffff'); c.setAttribute('opacity',i%3?'.45':'.9'); rd.appendChild(c); }
+  let rot=0, spinning=false;
+  const wres=$('#wheelRes'), wbtn=$('#wheelBtn');
+  function spin(){
+    if(spinning) return; spinning=true;
+    const idx=Math.floor(Math.random()*SEG.length), jitter=Math.random()*36-18;
+    let target=60-60*idx+jitter;
+    const base=rot-((rot%360)+360)%360;
+    rot = base + 360*(RM?1:4) + ((target%360)+360)%360;
+    wr.style.transform=`rotate(${rot}deg)`;
+    setTimeout(()=>{
+      const s=SEG[idx]; wres.innerHTML=`<b>${s.t}</b>${s.d}`;
+      wres.classList.remove('flash'); void wres.offsetWidth; wres.classList.add('flash');
+      spinning=false; wbtn.textContent='Ещё раз';
+    }, RM?50:3650);
+  }
+  wbtn.addEventListener('click',spin);
+  $('.wheel').addEventListener('click',spin);
 })();
 </script>
 
