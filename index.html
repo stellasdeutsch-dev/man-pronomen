@@ -1,0 +1,1153 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:title" content="Кто такой man">
+<meta property="og:description" content="Безличное местоимение man в немецком: история, интерактивные шаги, шпаргалка и тест.">
+<meta property="og:image" content="media/gemini.jpg">
+<link rel="icon" href="media/logo.png">
+<style>img{max-width:100%}[hidden]{display:none!important}body{margin:0}</style>
+<title>Кто такой man</title>
+<meta name="description" content="Безличное местоимение man в немецком: история, интерактивные шаги, шпаргалка и тест.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --blue:#1f3fd4;
+  --blue-in:#1b37c6;
+  --blue-deep:#2A52B2;
+  --sky:#87AFEA;
+  --ice:#e6edff;
+  --peach:#F5C8A9;
+  --peach-lt:#FBE8DA;
+  --cocoa:#8b5a3c;
+  --white:#ffffff;
+  --ink:#1a2f96;
+  --ink-soft:#4a5aa8;
+  --on-blue:rgba(255,255,255,.9);
+  --on-blue-soft:rgba(255,255,255,.66);
+  --shadow:0 24px 50px -18px rgba(6,16,90,.55);
+  --display:"Oswald","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --body:"Montserrat","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --r-card:32px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--blue);color:var(--on-blue);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img,video{max-width:100%;display:block}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+:focus-visible{outline:3px solid var(--peach);outline-offset:3px;border-radius:12px}
+
+.page{max-width:1120px;margin:0 auto;padding-inline:16px;position:relative}
+.sec{padding-block:64px;position:relative}
+.kicker{font:500 11px/1.4 var(--body);letter-spacing:.5em;text-transform:uppercase;color:var(--on-blue-soft);margin:0 0 14px}
+.card .kicker{color:var(--ink-soft)}
+.h2{font:700 clamp(46px,13vw,104px)/.9 var(--display);text-transform:uppercase;margin:0 0 22px;letter-spacing:-.005em;text-wrap:balance;color:var(--white)}
+.card .h2{color:var(--blue)}
+.h3{font:700 clamp(30px,8vw,48px)/.95 var(--display);text-transform:uppercase;margin:0 0 14px;color:var(--white);text-wrap:balance}
+.card .h3{color:var(--blue)}
+.lead{font-size:17px;max-width:34em;color:var(--on-blue)}
+p{margin:0 0 14px}
+.card{background:var(--white);color:var(--ink);border-radius:var(--r-card);padding:28px 22px;box-shadow:var(--shadow);position:relative}
+.card p{color:var(--ink)}
+.de{font-weight:700;color:var(--blue)}
+.hl{background:linear-gradient(transparent 55%,var(--peach) 55%);padding:0 .12em}
+.muted{color:var(--ink-soft)!important;font-size:14px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:19px 34px;font:800 11.5px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.btn-peach{background:linear-gradient(180deg,var(--peach-lt) 0%,var(--peach) 100%);color:var(--cocoa);box-shadow:0 16px 34px -10px rgba(6,16,90,.6),inset 0 2px 0 rgba(255,255,255,.9),inset 0 -3px 0 rgba(139,90,60,.12)}
+.btn-white{background:var(--white);color:var(--blue);box-shadow:0 16px 34px -12px rgba(6,16,90,.5)}
+.btn-ghost{background:var(--ice);color:var(--blue);padding:15px 24px}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn-wide{width:100%}
+
+/* pill (the tilted capsule from the reference) */
+.pill{display:inline-block;background:linear-gradient(180deg,#f7f9ff,#cddbf8);color:var(--blue);border-radius:999px;padding:16px 26px;font:800 clamp(13px,3.7vw,22px)/1 var(--body);letter-spacing:.12em;white-space:nowrap;text-transform:uppercase;box-shadow:0 18px 40px -14px rgba(6,16,90,.6),inset 0 2px 0 #fff}
+
+/* white decor objects */
+.deco{position:absolute;pointer-events:none;z-index:0;filter:drop-shadow(0 18px 22px rgba(6,16,90,.35))}
+.float{animation:float 7s ease-in-out infinite}
+.float.d2{animation-duration:9s;animation-delay:-3s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(var(--rot,0deg))}50%{transform:translateY(-14px) rotate(calc(var(--rot,0deg) + 4deg))}}
+
+/* ---------- HERO ---------- */
+.hero{padding-block:34px 70px;position:relative;overflow:visible}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:34px;position:relative;z-index:2}
+.brand{display:flex;align-items:center;gap:10px;font:700 13px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;text-decoration:none}
+.brand img{width:34px;height:34px}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:9px 14px;font:600 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--white)}
+.hero-grid{display:grid;gap:34px;position:relative;z-index:1}
+.mega{font:700 clamp(150px,52vw,300px)/.78 var(--display);text-transform:uppercase;margin:0;letter-spacing:-.02em;display:flex;
+  background:linear-gradient(180deg,#fff 40%,#b9c8ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mega span{display:inline-block;animation:rise .9s cubic-bezier(.2,.9,.2,1) backwards}
+.mega span:nth-child(2){animation-delay:.08s}.mega span:nth-child(3){animation-delay:.16s}
+@keyframes rise{from{transform:translateY(40%) scaleY(.6)}to{transform:none}}
+.hero .pill{transform:rotate(-7deg);margin:-26px 0 0 14px;position:relative;animation:drop .8s .45s cubic-bezier(.3,1.4,.4,1) backwards}
+@keyframes drop{from{transform:translateY(-60px) rotate(-22deg)}to{transform:rotate(-7deg)}}
+.hero .lead{margin:30px 0 26px;font-size:18px}
+.hero .lead b{color:var(--white)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-cta small{color:var(--on-blue-soft);font-size:13px}
+
+/* the house sign */
+.sign-wrap{display:flex;justify-content:center;perspective:900px}
+.sign{width:min(100%,340px);background:linear-gradient(160deg,#fff 0%,#eef2ff 70%,#d9e2fb 100%);border-radius:28px;padding:26px 24px 24px;color:var(--ink);box-shadow:0 40px 60px -24px rgba(6,16,90,.7),inset 0 2px 0 #fff;transform-origin:50% -30px;animation:swing 1.4s .3s cubic-bezier(.2,.9,.3,1) backwards;position:relative}
+.sign::before,.sign::after{content:"";position:absolute;top:14px;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,#aab8e6)}
+.sign::before{left:16px}.sign::after{right:16px}
+@keyframes swing{0%{transform:rotateX(70deg) rotate(8deg)}60%{transform:rotateX(-8deg) rotate(-3deg)}100%{transform:none}}
+.sign svg{width:92px;height:92px;margin:4px auto 14px;display:block}
+.sign .t{font:700 34px/1 var(--display);text-transform:uppercase;text-align:center;color:var(--blue);letter-spacing:.01em}
+.sign .t em{font-style:normal;background:var(--peach);color:var(--cocoa);border-radius:10px;padding:0 8px}
+.sign .ru{text-align:center;font-size:13px;color:var(--ink-soft);margin:10px 0 0}
+
+/* ---------- STORY ---------- */
+.story .card{padding:34px 24px 30px;overflow:hidden}
+.story-lines p{font-size:17px;margin:0 0 12px;max-width:36em}
+.story-lines .say{padding-left:14px;border-left:3px solid var(--ice)}
+.story-lines .punch{font:700 26px/1.05 var(--display);text-transform:uppercase;color:var(--blue);margin-top:22px}
+.story .deco{right:-22px;top:-30px;width:120px;--rot:-12deg}
+
+/* ---------- STEP HEAD ---------- */
+.step-head{display:grid;gap:4px;margin-bottom:24px;position:relative;z-index:1}
+.step-no{font:600 13px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--peach)}
+.dan{font-size:17px;color:var(--on-blue);max-width:36em}
+.dan p{margin:0 0 10px}
+.two{display:grid;gap:22px}
+
+/* ---------- MORPH (der Mann → man) ---------- */
+.morph{text-align:center;padding:34px 18px 26px}
+.word{font:700 clamp(84px,26vw,150px)/1 var(--display);color:var(--blue);display:flex;justify-content:center;align-items:baseline;height:1.08em;margin:6px 0 10px;text-transform:none}
+.word .art{display:inline-block;font-size:.46em;color:var(--sky);margin-right:.18em;max-width:3em;overflow:hidden;white-space:nowrap;transition:max-width .7s cubic-bezier(.6,0,.2,1) .15s,margin .7s .15s,opacity .45s,transform .5s}
+.word .L{display:inline-grid}
+.word .L>span{grid-area:1/1;transition:transform .6s cubic-bezier(.3,1.3,.5,1),opacity .35s;text-align:center}
+.word .Ll{transform:rotateX(90deg) translateY(-.3em);opacity:0}
+.word .n2{display:inline-block;max-width:.7em;overflow:hidden;transition:max-width .7s cubic-bezier(.6,0,.2,1) .15s,opacity .4s,transform .5s}
+.morph.s1 .art,.morph.s2 .art,.morph.s3 .art{max-width:0;margin-right:0;opacity:0;transform:translateY(.4em) rotate(-24deg)}
+.morph.s2 .n2,.morph.s3 .n2{max-width:0;opacity:0;transform:translateY(.5em) rotate(30deg)}
+.morph.s2 .Lu,.morph.s3 .Lu{transform:rotateX(-90deg) translateY(.3em);opacity:0}
+.morph.s2 .Ll,.morph.s3 .Ll{transform:none;opacity:1}
+.crowd{display:flex;justify-content:center;align-items:flex-end;gap:6px;height:96px;margin:6px 0 10px}
+.crowd svg{height:100%;width:auto;transition:transform .55s cubic-bezier(.3,1.5,.5,1),opacity .3s;transform-origin:50% 100%}
+.crowd .p:not(.one){transform:scale(0);opacity:0}
+.morph.s3 .crowd .p{transform:none;opacity:1}
+.morph.s3 .crowd .p:nth-child(2){transition-delay:.05s}.morph.s3 .crowd .p:nth-child(3){transition-delay:.12s}
+.morph.s3 .crowd .p:nth-child(4){transition-delay:.19s}.morph.s3 .crowd .p:nth-child(5){transition-delay:.26s}
+.morph.s3 .crowd .p:nth-child(6){transition-delay:.33s}.morph.s3 .crowd .p:nth-child(7){transition-delay:.42s}
+.cap{min-height:3.2em;font-size:16px;color:var(--ink);max-width:28em;margin:0 auto 18px}
+.dots{display:flex;gap:8px;justify-content:center;margin-bottom:18px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--ice);transition:background .3s,width .3s}
+.dots i.on{background:var(--blue);width:26px;border-radius:9px}
+
+/* ---------- FLIP CARDS ---------- */
+.flips{display:grid;gap:14px}
+.flip{perspective:1000px;min-height:170px}
+.flip-in{display:block;width:100%;padding:0;text-align:left;position:relative;height:100%;min-height:170px;transition:transform .7s cubic-bezier(.3,1.2,.4,1);transform-style:preserve-3d}
+.flip.open .flip-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:26px;padding:22px 22px 18px;display:flex;flex-direction:column;justify-content:space-between;text-align:left;box-shadow:var(--shadow)}
+.face.front{background:var(--white);color:var(--ink)}
+.face.back{background:linear-gradient(160deg,#2c4fe0,var(--blue-in));color:var(--white);transform:rotateY(180deg);border:1px solid rgba(255,255,255,.18)}
+.face .q{font:600 21px/1.25 var(--body)}
+.face .who{display:inline-flex;align-self:flex-start;gap:6px;align-items:center;background:var(--ice);color:var(--blue);border-radius:999px;padding:7px 12px;font:700 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.face .g{font:700 26px/1.15 var(--body);letter-spacing:-.01em}
+.face .g b{background:var(--peach);color:var(--cocoa);border-radius:8px;padding:0 6px}
+.face .row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px;color:var(--on-blue-soft)}
+.tap{font:600 12px/1 var(--body);color:var(--ink-soft);letter-spacing:.06em}
+.say-btn{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center;flex:none}
+.card .say-btn,.sb-light{background:var(--ice)}
+.say-btn svg{width:20px;height:20px}
+
+/* ---------- CONJUGATION ---------- */
+.verbs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.vchip{border-radius:999px;padding:11px 18px;font:700 14px/1 var(--body);background:var(--ice);color:var(--blue);transition:background .2s,color .2s}
+.vchip[aria-pressed="true"]{background:var(--blue);color:var(--white)}
+.conj{display:grid;border-radius:22px;overflow:hidden;border:1px solid var(--ice)}
+.conj .r{display:grid;grid-template-columns:1.25fr 1fr;align-items:center;padding:13px 16px;border-top:1px solid var(--ice);transition:background .4s}
+.conj .r:first-child{border-top:0}
+.conj .pr{font-weight:600;color:var(--ink);display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.conj .f{font:700 20px/1 var(--body);color:var(--blue);display:inline-block}
+.conj .f.swap{animation:swap .45s cubic-bezier(.3,1.3,.5,1)}
+@keyframes swap{from{transform:translateY(60%);opacity:0}to{transform:none;opacity:1}}
+.conj .f .end{color:var(--cocoa);background:var(--peach-lt);border-radius:6px;padding:0 3px}
+.conj .r.target.lit{background:#fff4ec}
+.slot{display:inline-flex;min-width:0}
+.man-chip{display:inline-flex;align-items:center;background:var(--peach);color:var(--cocoa);border-radius:999px;padding:7px 13px;font:800 14px/1 var(--body);box-shadow:0 10px 18px -8px rgba(139,90,60,.6)}
+.bench{display:flex;align-items:center;gap:12px;margin:0 0 16px;min-height:40px}
+.bench .muted{margin:0}
+.conj-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.warn{margin-top:18px;display:grid;gap:8px;background:var(--ice);border-radius:20px;padding:16px 18px}
+.warn .x{color:var(--cocoa);text-decoration:line-through;text-decoration-thickness:2px;font-weight:700}
+.warn .ok{color:var(--blue);font-weight:800}
+
+/* ---------- CHAT ---------- */
+.toggle{display:grid;grid-template-columns:1fr 1fr;background:var(--ice);border-radius:999px;padding:5px;margin-bottom:18px;position:relative}
+.toggle button{position:relative;z-index:1;padding:14px 8px;border-radius:999px;font:800 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--blue);transition:color .3s}
+.toggle button[aria-pressed="true"]{color:var(--white)}
+.toggle .knob{position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);border-radius:999px;background:var(--blue);transition:transform .45s cubic-bezier(.3,1.3,.5,1)}
+.toggle.man .knob{transform:translateX(100%)}
+.chat{display:flex;flex-direction:column;gap:10px;min-height:290px;background:linear-gradient(180deg,#f3f6ff,#e9efff);border-radius:24px;padding:18px 14px}
+.msg{max-width:84%;border-radius:20px;padding:11px 14px;font-size:15px;line-height:1.35;animation:pop .45s cubic-bezier(.3,1.4,.5,1) backwards}
+.msg small{display:block;font-size:12px;opacity:.72;margin-top:4px}
+.msg.me{align-self:flex-end;background:var(--blue);color:var(--white);border-bottom-right-radius:6px}
+.msg.them{align-self:flex-start;background:var(--white);color:var(--ink);border-bottom-left-radius:6px;box-shadow:0 8px 18px -12px rgba(6,16,90,.45)}
+.msg .nm{display:block;font:800 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--sky);margin-bottom:6px}
+.msg b{background:var(--peach);color:var(--cocoa);border-radius:6px;padding:0 4px}
+.typing{align-self:flex-start;background:var(--white);border-radius:18px;padding:12px 14px;display:flex;gap:5px}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--sky);animation:blink 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes pop{from{transform:translateY(12px) scale(.9)}to{transform:none}}
+.verdict{align-self:center;margin-top:6px;border-radius:999px;padding:10px 16px;font:800 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;animation:pop .5s cubic-bezier(.3,1.4,.5,1) backwards}
+.verdict.bad{background:var(--peach);color:var(--cocoa)}
+.verdict.good{background:var(--blue);color:var(--white)}
+
+/* ---------- SIGNS + BUILDER ---------- */
+.signs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.sg{background:linear-gradient(160deg,#fff,#e9eeff);border-radius:24px;padding:16px 12px 14px;display:grid;justify-items:center;gap:8px;color:var(--blue);box-shadow:0 18px 30px -18px rgba(6,16,90,.7);transition:transform .3s cubic-bezier(.3,1.4,.5,1),box-shadow .3s;border:2px solid transparent}
+.sg svg{width:58px;height:58px}
+.sg span{font:700 20px/1 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.sg[aria-pressed="true"]{border-color:var(--peach);transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 26px 40px -18px rgba(6,16,90,.8)}
+.builder{display:grid;gap:14px}
+.line{min-height:64px;border:2px dashed #c9d5f7;border-radius:20px;padding:10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tray{display:flex;flex-wrap:wrap;gap:8px;min-height:48px}
+.tok{border-radius:14px;padding:11px 14px;font:700 17px/1 var(--body);background:var(--white);color:var(--ink);box-shadow:0 6px 14px -8px rgba(6,16,90,.6),inset 0 0 0 1px #d9e2fb}
+.tok.man{background:var(--peach);color:var(--cocoa);box-shadow:0 6px 14px -8px rgba(139,90,60,.7)}
+.tok.mod{background:var(--blue);color:var(--white)}
+.tok.inf{box-shadow:inset 0 -3px 0 var(--sky),0 6px 14px -8px rgba(6,16,90,.6)}
+.build-out{display:grid;gap:4px;min-height:3.4em}
+.build-out .ru{font:600 18px/1.3 var(--body);color:var(--ink)}
+.formula{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font:700 13px/1 var(--body);color:var(--ink-soft);margin-top:4px}
+.formula span{border-radius:999px;padding:7px 10px;background:var(--ice);color:var(--blue)}
+.formula .fm{background:var(--peach);color:var(--cocoa)}
+
+/* ---------- QUIZ ---------- */
+.quiz .bar{height:8px;border-radius:8px;background:var(--ice);overflow:hidden;margin-bottom:22px}
+.quiz .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--sky),var(--blue));border-radius:8px;transition:width .5s cubic-bezier(.3,1,.4,1)}
+.qtext{font:700 clamp(22px,6vw,30px)/1.25 var(--body);color:var(--ink);margin:0 0 18px;min-height:2.5em}
+.qtext .gap{display:inline-block;min-width:2.8em;border-bottom:3px solid var(--sky);text-align:center;color:var(--blue)}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;border-radius:18px;padding:16px 18px;font:700 17px/1.3 var(--body);background:var(--ice);color:var(--blue);transition:background .25s,color .25s,transform .25s}
+.opt:hover:not([disabled]){transform:translateX(4px)}
+.opt.right{background:var(--blue);color:var(--white)}
+.opt.wrong{background:var(--peach);color:var(--cocoa);text-decoration:line-through}
+.opt[disabled]{cursor:default}
+.fb{min-height:4.8em;margin-top:16px;font-size:15px;color:var(--ink)}
+.fb b{color:var(--blue)}
+.q-next{margin-top:6px}
+
+/* ---------- CHEAT SHEET ---------- */
+.cheat{display:grid;gap:0}
+.cheat .li{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;align-items:baseline;padding:16px 0;border-top:1px solid var(--ice)}
+.cheat .li:first-child{border-top:0}
+.cheat .k{font:700 22px/1.1 var(--display);color:var(--blue);text-transform:none;white-space:nowrap}
+.cheat .v{color:var(--ink);font-size:15px}
+.cheat .v::before{content:"→ ";color:var(--sky);font-weight:700}
+.outro{font:700 clamp(28px,8vw,44px)/1 var(--display);text-transform:uppercase;color:var(--white);margin-top:30px;text-wrap:balance}
+.outro small{display:block;font:500 16px/1.5 var(--body);text-transform:none;color:var(--on-blue-soft);margin-top:12px}
+
+/* ================= AD ================= */
+.divider{display:flex;align-items:center;gap:14px;color:var(--on-blue-soft);font:600 12px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;padding-block:30px 0}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.25)}
+.ad-hero{text-align:center;padding-block:56px 30px;position:relative}
+.ad-hero .kicker{letter-spacing:.6em}
+.mega2{font:700 clamp(96px,30vw,230px)/.8 var(--display);text-transform:uppercase;margin:0;letter-spacing:-.01em;background:linear-gradient(180deg,#fff 45%,#aebfff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ad-hero .pill{transform:rotate(-5deg);margin-top:-18px;position:relative}
+.ad-hero .deco.plane{left:-10px;top:40px;width:110px;--rot:-8deg}
+.ad-hero .deco.bfly{right:-8px;top:10px;width:120px;--rot:10deg}
+
+.pain .card{padding:32px 24px}
+.pains{display:grid;gap:14px}
+.pn{background:var(--white);border-radius:26px;padding:22px 20px;color:var(--ink);box-shadow:var(--shadow);display:grid;gap:10px}
+.pn .was{font:600 15px/1.35 var(--body);color:var(--ink-soft);display:flex;gap:10px}
+.pn .was::before{content:"";flex:none;width:10px;height:10px;margin-top:6px;border-radius:50%;background:var(--peach)}
+.pn .now{font:700 18px/1.3 var(--body);color:var(--blue);display:flex;gap:10px}
+.pn .now::before{content:"";flex:none;width:10px;height:10px;margin-top:7px;border-radius:50%;background:var(--blue)}
+
+.is{padding:30px 22px 34px;overflow:visible}
+.is .h2{font-size:clamp(52px,15vw,110px)}
+.feat{display:grid;gap:18px;margin:8px 0 26px}
+.ft{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;color:var(--ink);font-size:15px}
+.ft i{width:36px;height:36px;border-radius:10px;background:var(--ice);display:grid;place-items:center}
+.ft i svg{width:20px;height:20px}
+.ft b{color:var(--blue)}
+.is .cta-center{display:flex;justify-content:center;margin-bottom:-60px}
+.is .deco.mic{right:-14px;top:-34px;width:96px;--rot:14deg}
+
+.stats{display:grid;gap:14px;margin-top:80px}
+.bigstat{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:center;padding:24px 22px}
+.bigstat .n{font:700 clamp(84px,25vw,150px)/.85 var(--display);color:var(--blue);letter-spacing:-.02em}
+.bigstat .d{color:var(--ink);font-size:16px;line-height:1.35}
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;grid-column:1/-1;margin-top:14px;border-top:1px solid var(--ice);padding-top:14px}
+.mini div{font-size:11.5px;color:var(--ink-soft);line-height:1.3}
+.mini b{display:block;font:700 26px/1 var(--display);color:var(--blue);margin-bottom:4px}
+
+/* showcase */
+.show-tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin:0 -16px 18px;padding-inline:16px;scrollbar-width:none}
+.show-tabs::-webkit-scrollbar{display:none}
+.stab{flex:none;border-radius:999px;padding:12px 18px;font:700 12px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(255,255,255,.35);color:var(--white);transition:background .25s,color .25s}
+.stab[aria-selected="true"]{background:var(--white);color:var(--blue);border-color:var(--white)}
+.stage{display:grid;gap:18px;align-items:center}
+.laptop{background:#0e1a5c;border-radius:22px;padding:10px;box-shadow:0 40px 60px -26px rgba(3,8,50,.9)}
+.laptop video{width:100%;aspect-ratio:16/8.4;object-fit:cover;object-position:top;border-radius:14px;background:#0e1a5c}
+.stage-cap{font-size:15px;color:var(--on-blue)}
+.stage-cap b{display:block;font:700 26px/1 var(--display);text-transform:uppercase;color:var(--white);margin-bottom:8px}
+
+.phone-row{display:grid;gap:26px;align-items:center;margin-top:50px}
+.phone{justify-self:center;width:min(78vw,290px);border-radius:46px;padding:12px;background:linear-gradient(150deg,#fff,#dfe6fb 60%,#c3cff4);box-shadow:0 50px 70px -30px rgba(3,8,50,.9),inset 0 2px 0 #fff;transform:rotate(5deg);position:relative}
+.phone video{width:100%;aspect-ratio:858/1352;object-fit:cover;border-radius:36px;background:#fff}
+.phone .tag{position:absolute;background:var(--white);color:var(--blue);border-radius:999px;padding:9px 14px;font:800 11px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;box-shadow:0 14px 24px -12px rgba(6,16,90,.7);transform:rotate(-5deg)}
+.phone .t1{left:-26px;top:18%}.phone .t2{right:-20px;top:46%;background:var(--peach);color:var(--cocoa)}.phone .t3{left:-14px;bottom:14%}
+
+.inside{display:grid;gap:0;margin-top:6px}
+.in-step{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:16px 0;border-top:1px solid rgba(255,255,255,.2)}
+.in-step:first-child{border-top:0}
+.in-step .no{width:44px;height:44px;border-radius:50%;background:var(--white);color:var(--blue);display:grid;place-items:center;font:700 20px/1 var(--display)}
+.in-step b{display:block;color:var(--white);font-size:17px;margin-bottom:4px}
+.in-step span{color:var(--on-blue-soft);font-size:15px}
+
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:6px 16px 20px;scrollbar-width:none}
+.shots::-webkit-scrollbar{display:none}
+.shots figure{flex:none;width:min(82vw,460px);margin:0;scroll-snap-align:center}
+.shots img{border-radius:18px;box-shadow:0 26px 40px -24px rgba(3,8,50,.9);background:var(--white);width:100%}
+.shots figcaption{font-size:13px;color:var(--on-blue-soft);margin-top:10px}
+
+/* for whom */
+.whom{display:grid;gap:34px;text-align:center}
+.wh{display:grid;justify-items:center;gap:10px}
+.orb{width:170px;height:170px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#dfe7ff 62%,#b9c9f3);display:grid;place-items:center;position:relative;box-shadow:0 30px 40px -24px rgba(3,8,50,.9)}
+.orb svg.main{width:84px;height:84px}
+.orb .bub{position:absolute;width:40px;height:40px;border-radius:12px;background:linear-gradient(160deg,#a9c3f3,var(--sky));display:grid;place-items:center;color:var(--white);font:800 13px/1 var(--body);box-shadow:0 10px 18px -8px rgba(6,16,90,.6)}
+.orb .b1{top:6px;right:-2px;transform:rotate(12deg)}.orb .b2{bottom:16px;left:-6px;transform:rotate(-14deg)}
+.wh h4{font:700 26px/1 var(--display);text-transform:uppercase;color:var(--white);margin:10px 0 0}
+.wh p{color:var(--on-blue-soft);font-size:15px;max-width:22em;margin:0}
+
+/* reviews */
+.revs{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:6px 16px 20px;scrollbar-width:none;align-items:flex-start}
+.revs::-webkit-scrollbar{display:none}
+.revs img{flex:none;width:min(74vw,320px);border-radius:20px;scroll-snap-align:center;box-shadow:0 26px 40px -24px rgba(3,8,50,.9)}
+.swipe{font-size:13px;color:var(--on-blue-soft)}
+
+/* pricing */
+.plans{display:grid;gap:18px}
+.plan{background:linear-gradient(170deg,#2a4be0,var(--blue-in));border:1px solid rgba(255,255,255,.2);border-radius:30px;padding:28px 22px 26px;display:flex;flex-direction:column;position:relative;box-shadow:0 30px 50px -30px rgba(3,8,50,.9)}
+.plan.best{background:var(--white);border-color:var(--white)}
+.plan .badge{position:absolute;top:-14px;right:20px;background:var(--peach);color:var(--cocoa);border-radius:999px;padding:9px 14px;font:800 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;transform:rotate(3deg);box-shadow:0 10px 20px -10px rgba(6,16,90,.6)}
+.plan h4{font:700 44px/1 var(--display);text-transform:uppercase;margin:0;color:var(--white)}
+.plan .for{color:var(--on-blue-soft);font-size:14px;margin:4px 0 18px}
+.plan.best h4{color:var(--blue)}.plan.best .for{color:var(--ink-soft)}
+.plan ul{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:10px;flex:1}
+.plan li{display:grid;grid-template-columns:14px 1fr;gap:10px;font-size:14.5px;line-height:1.35;color:var(--white)}
+.plan li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--white);margin-top:5px}
+.plan li.no{color:rgba(255,255,255,.4);text-decoration:line-through}
+.plan li.no::before{background:rgba(255,255,255,.35)}
+.plan.best li{color:var(--ink)}.plan.best li::before{background:var(--blue)}
+.price{font:700 clamp(40px,11vw,54px)/1 var(--display);color:var(--white);text-align:center}
+.price s{font-size:.5em;opacity:.55;margin-left:8px;font-weight:500}
+.plan.best .price{color:var(--blue)}
+.price-note{text-align:center;font-size:13px;color:var(--on-blue-soft);margin:8px 0 18px}
+.plan.best .price-note{color:var(--ink-soft)}
+
+.faq{display:grid;gap:10px}
+.faq details{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:0 18px}
+.faq summary{list-style:none;cursor:pointer;padding:18px 0;font:700 16px/1.35 var(--body);color:var(--white);display:flex;justify-content:space-between;gap:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:500 24px/1 var(--body);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--on-blue);font-size:15px;padding-bottom:16px;margin:0}
+
+.final{text-align:center;padding-block:70px 130px}
+.final .outro{margin:0 auto 26px;max-width:14em}
+.final .btn{padding:22px 40px}
+.foot{font-size:12px;color:var(--on-blue-soft);text-align:center;padding-bottom:110px}
+
+/* sticky mobile CTA */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:linear-gradient(180deg,rgba(31,63,212,0),rgba(27,55,198,.96) 40%);transform:translateY(110%);transition:transform .45s cubic-bezier(.3,1.2,.4,1)}
+.sticky.show{transform:none}
+.sticky .btn{width:100%;max-width:480px;margin:0 auto;display:flex}
+
+/* pop-in on scroll, from a visible resting state */
+.rv.in{animation:settle .7s cubic-bezier(.2,.9,.3,1)}
+@keyframes settle{from{transform:translateY(22px) scale(.985)}to{transform:none}}
+
+/* ---------- ≥ 760px ---------- */
+@media (min-width:760px){
+  .page{padding-inline:32px}
+  .sec{padding-block:90px}
+  .hero-grid{grid-template-columns:1.25fr .9fr;align-items:center}
+  .sign-wrap{justify-content:flex-end}
+  .card{padding:44px 44px}
+  .story .card{padding:48px 48px 42px}
+  .two{grid-template-columns:.9fr 1.1fr;align-items:start;gap:36px}
+  .flips{grid-template-columns:1fr 1fr}
+  .signs{grid-template-columns:repeat(4,1fr)}
+  .pains{grid-template-columns:1fr 1fr}
+  .stage{grid-template-columns:1.5fr 1fr;gap:34px}
+  .phone-row{grid-template-columns:.8fr 1fr;gap:50px}
+  .stats{grid-template-columns:1fr}
+  .whom{grid-template-columns:repeat(3,1fr)}
+  .plans{grid-template-columns:repeat(3,1fr);align-items:stretch}
+  .feat{grid-template-columns:1fr 1fr;gap:22px 34px}
+  .is{padding:48px 52px 40px}
+  .sticky{display:none}
+  .foot{padding-bottom:40px}
+}
+@media (min-width:1080px){
+  body{background:linear-gradient(90deg,var(--blue) 0,var(--blue) calc(50% - 560px),var(--blue-in) calc(50% - 560px),var(--blue-in) calc(50% + 560px),var(--blue) calc(50% + 560px))}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cfd9f6"/></linearGradient>
+    <linearGradient id="gw2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9eeff"/><stop offset="1" stop-color="#aebde9"/></linearGradient>
+    <symbol id="plane" viewBox="0 0 120 110"><path d="M2 44 118 2 72 108 54 70Z" fill="url(#gw)"/><path d="M54 70 118 2 62 62Z" fill="url(#gw2)"/><path d="M54 70 62 62 60 90Z" fill="#b8c6ef"/></symbol>
+    <symbol id="bfly" viewBox="0 0 120 110"><path d="M60 58C40 10 6 4 8 30c2 22 26 30 52 28Z" fill="url(#gw)"/><path d="M60 58c20-48 54-54 52-28-2 22-26 30-52 28Z" fill="url(#gw2)"/><path d="M60 58C44 70 22 92 34 102c10 8 22-18 26-44Z" fill="url(#gw2)"/><path d="M60 58c16 12 38 34 26 44-10 8-22-18-26-44Z" fill="url(#gw)"/><rect x="57" y="36" width="6" height="46" rx="3" fill="#c3cff4"/></symbol>
+    <symbol id="mic" viewBox="0 0 90 120"><rect x="22" y="4" width="46" height="70" rx="23" fill="url(#gw)"/><g stroke="#b3c2ee" stroke-width="3"><path d="M26 22h38M24 34h42M24 46h42M26 58h38"/></g><path d="M12 52c0 22 14 36 33 36s33-14 33-36" fill="none" stroke="url(#gw2)" stroke-width="7" stroke-linecap="round"/><rect x="40" y="86" width="10" height="22" fill="#d6dff8"/><rect x="24" y="106" width="42" height="10" rx="5" fill="url(#gw)"/></symbol>
+    <symbol id="spk" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="person" viewBox="0 0 40 90"><circle cx="20" cy="14" r="11"/><path d="M4 90V44c0-10 7-17 16-17s16 7 16 17v46Z"/></symbol>
+    <symbol id="dog" viewBox="0 0 110 60"><path d="M14 30c0-8 8-12 18-12h44c8 0 12-6 14-12l4-4c4 0 6 4 6 8v6c6 0 10 4 10 8s-6 6-10 6h-8v4c0 6-6 10-14 10H32c-10 0-18-4-18-14Z"/><rect x="24" y="44" width="7" height="14" rx="3"/><rect x="70" y="44" width="7" height="14" rx="3"/><path d="M14 30 2 22" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<div class="page">
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="topbar">
+    <a class="brand" href="#top" id="top"><img src="media/logo.png" alt="">Stellas</a>
+    <span class="chip">Немецкий · A1</span>
+  </div>
+  <div class="hero-grid">
+    <div>
+      <p class="kicker">Гайд · 5 минут · без воды</p>
+      <h1 class="mega" aria-label="man"><span>m</span><span>a</span><span>n</span></h1>
+      <div class="pill">Безличное местоимение</div>
+      <p class="lead">Кто такой <b>man</b>, почему он не мужик и как он спасёт тебя от ссоры с коллегой.</p>
+      <div class="hero-cta">
+        <a class="btn btn-peach" href="#story">Разобраться</a>
+        <small>6 шагов, в конце тест</small>
+      </div>
+    </div>
+    <div class="sign-wrap">
+      <div class="sign" role="img" aria-label="Табличка: Hier raucht man nicht">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#fff" stroke="#e2543a" stroke-width="9"/><rect x="18" y="52" width="52" height="12" rx="2" fill="#1a2f96"/><rect x="72" y="52" width="9" height="12" fill="#F5C8A9"/><path d="M76 46c0-8 6-8 6-16" fill="none" stroke="#87AFEA" stroke-width="4" stroke-linecap="round"/><path d="M20 20 80 80" stroke="#e2543a" stroke-width="9"/></svg>
+        <div class="t">Hier raucht <em>man</em> nicht</div>
+        <p class="ru">Табличка в моём подъезде</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ STORY ============ -->
+<section class="sec story" id="story">
+  <div class="card rv">
+    <svg class="deco float" aria-hidden="true"><use href="#plane"/></svg>
+    <p class="kicker">История</p>
+    <div class="story-lines">
+      <p>Я переехал в Австрию. Снял квартиру. В подъезде висела табличка.</p>
+      <p><span class="de">Hier raucht man nicht.</span></p>
+      <p>По-немецки я тогда знал слов пятнадцать. Одно из них было <span class="de">Mann</span>. Мужчина.</p>
+      <p>Думаю, ну ок. Какой-то мужик здесь не курит. Конкретный. Видимо, у них с хаусмайстером давний конфликт.</p>
+      <p>Стою, курю. Я же не этот мужик.</p>
+      <p>Выходит хаусмайстер. Смотрит на меня. Смотрит на табличку. Говорит, <span class="de">hier raucht man nicht</span>.</p>
+      <p class="say">Говорю, я не man.</p>
+      <p class="say">Он говорит, man — это все.</p>
+      <p class="say">Говорю, все мужики?</p>
+      <p class="say">Он говорит, все. Вы. Я. Фрау Хубер с третьего этажа. Её такса.</p>
+      <p>Такса, кстати, не курила.</p>
+      <p class="punch">Я потушил. И пошёл разбираться, кто такой man.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STEP 1: MORPH ============ -->
+<section class="sec" id="s1">
+  <div class="two">
+    <div class="step-head">
+      <span class="step-no">Шаг 1</span>
+      <h2 class="h2">Man — не мужик</h2>
+      <div class="dan">
+        <p>Man действительно вырос из <span class="hl">der Mann</span>. Давно. Потом по дороге растерял всё лишнее.</p>
+        <p>Жми «Дальше» и смотри, как это было.</p>
+      </div>
+    </div>
+    <div class="card morph s0 rv" id="morph">
+      <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+      <div class="word" aria-live="polite"><span class="art">der</span><span class="L"><span class="Lu">M</span><span class="Ll">m</span></span><span>a</span><span>n</span><span class="n2">n</span></div>
+      <div class="crowd" aria-hidden="true">
+        <svg class="p" viewBox="0 0 40 90" style="color:#87AFEA;height:74%"><use href="#person" fill="currentColor"/></svg>
+        <svg class="p" viewBox="0 0 40 90" style="color:#F5C8A9;height:88%"><use href="#person" fill="currentColor"/></svg>
+        <svg class="p" viewBox="0 0 40 90" style="color:#2A52B2;height:60%"><use href="#person" fill="currentColor"/></svg>
+        <svg class="p one" viewBox="0 0 40 90" style="color:#1f3fd4"><use href="#person" fill="currentColor"/></svg>
+        <svg class="p" viewBox="0 0 40 90" style="color:#87AFEA;height:92%"><use href="#person" fill="currentColor"/></svg>
+        <svg class="p" viewBox="0 0 40 90" style="color:#F5C8A9;height:70%"><use href="#person" fill="currentColor"/></svg>
+        <svg class="p" viewBox="0 0 110 60" style="color:#8b5a3c;height:34%"><use href="#dog" fill="currentColor"/></svg>
+      </div>
+      <p class="cap" id="morphCap">Жил-был <b>der Mann</b>. Мужчина. Один. Конкретный. С артиклем.</p>
+      <button class="btn btn-peach" id="morphBtn">Дальше</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STEP 2: FLIPS ============ -->
+<section class="sec" id="s2">
+  <div class="step-head">
+    <span class="step-no">Шаг 2</span>
+    <h2 class="h2">Кто это сделал? Неважно</h2>
+    <div class="dan">
+      <p>В русском мы про таких людей не говорим. Ставим глагол во множественное число и делаем вид, что это какие-то «они».</p>
+      <p>Кто говорит в Швейцарии по-немецки? Кто-то. А может, все. Мы не знаем. Нам и не надо. Для этого немцы держат man.</p>
+      <p class="muted" style="color:var(--on-blue-soft)!important">Тапни карточку, чтобы перевернуть.</p>
+    </div>
+  </div>
+  <div class="flips">
+    <div class="flip" data-de="Hier raucht man nicht.">
+      <button class="flip-in" aria-label="Перевернуть: Здесь не курят">
+        <span class="face front"><span class="who">Кто? Неизвестно</span><span class="q">Здесь не курят.</span><span class="tap">Тапни → по-немецки</span></span>
+        <span class="face back"><span class="g">Hier raucht <b>man</b> nicht.</span><span class="row">Табличка в подъезде<span class="say-btn" data-say><svg><use href="#spk"/></svg></span></span></span>
+      </button>
+    </div>
+    <div class="flip" data-de="In China isst man viel Reis.">
+      <button class="flip-in" aria-label="Перевернуть: В Китае едят много риса">
+        <span class="face front"><span class="who">Кто? Неизвестно</span><span class="q">В Китае едят много риса.</span><span class="tap">Тапни → по-немецки</span></span>
+        <span class="face back"><span class="g">In China isst <b>man</b> viel Reis.</span><span class="row">Кто-то ест. Много.<span class="say-btn" data-say><svg><use href="#spk"/></svg></span></span></span>
+      </button>
+    </div>
+    <div class="flip" data-de="In der Schweiz spricht man Deutsch.">
+      <button class="flip-in" aria-label="Перевернуть: В Швейцарии говорят по-немецки">
+        <span class="face front"><span class="who">Кто? Неизвестно</span><span class="q">В Швейцарии говорят по-немецки.</span><span class="tap">Тапни → по-немецки</span></span>
+        <span class="face back"><span class="g">In der Schweiz spricht <b>man</b> Deutsch.</span><span class="row">Все? Кто-то? Не важно.<span class="say-btn" data-say><svg><use href="#spk"/></svg></span></span></span>
+      </button>
+    </div>
+    <div class="flip" data-de="Autos stellt man aus Metall her.">
+      <button class="flip-in" aria-label="Перевернуть: Машины делают из металла">
+        <span class="face front"><span class="who">Кто? Неизвестно</span><span class="q">Машины делают из металла.</span><span class="tap">Тапни → по-немецки</span></span>
+        <span class="face back"><span class="g">Autos stellt <b>man</b> aus Metall her.</span><span class="row">Завод. Люди. Какие — неважно.<span class="say-btn" data-say><svg><use href="#spk"/></svg></span></span></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STEP 3: CONJUGATION ============ -->
+<section class="sec" id="s3">
+  <div class="two">
+    <div class="step-head">
+      <span class="step-no">Шаг 3</span>
+      <h2 class="h2">Man сидит с er, sie, es</h2>
+      <div class="dan">
+        <p>Man — это все. Логично было бы спрягать его как «они».</p>
+        <p>Немцы подумали. Решили, что логика — это для слабых.</p>
+        <p>Man спрягается как <span class="hl">er, sie, es</span>. Садится в их строчку таблицы и молчит. Своих окончаний у него нет.</p>
+      </div>
+    </div>
+    <div class="card rv" id="conjCard">
+      <div class="verbs" role="group" aria-label="Глагол">
+        <button class="vchip" aria-pressed="true" data-v="essen">essen</button>
+        <button class="vchip" aria-pressed="false" data-v="sprechen">sprechen</button>
+        <button class="vchip" aria-pressed="false" data-v="rauchen">rauchen</button>
+        <button class="vchip" aria-pressed="false" data-v="fahren">fahren</button>
+      </div>
+      <div class="bench" id="bench"><span class="man-chip" id="manChip">man</span><p class="muted">ждёт своё место в таблице</p></div>
+      <div class="conj" id="conj">
+        <div class="r"><span class="pr">ich</span><span class="f"></span></div>
+        <div class="r"><span class="pr">du</span><span class="f"></span></div>
+        <div class="r target"><span class="pr">er / sie / es <span class="slot" id="slot"></span></span><span class="f"></span></div>
+        <div class="r"><span class="pr">wir</span><span class="f"></span></div>
+        <div class="r"><span class="pr">ihr</span><span class="f"></span></div>
+        <div class="r"><span class="pr">sie / Sie</span><span class="f"></span></div>
+      </div>
+      <div class="conj-actions">
+        <button class="btn btn-peach" id="seatBtn">Посадить man</button>
+      </div>
+      <div class="warn">
+        <span>Хотя man — это «все», глагол в единственном числе:</span>
+        <span><span class="x">man essen</span> &nbsp;→&nbsp; <span class="ok">man isst</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STEP 4: DU vs MAN ============ -->
+<section class="sec" id="s4">
+  <div class="two">
+    <div class="step-head">
+      <span class="step-no">Шаг 4</span>
+      <h2 class="h2">Не говори du. Говори man</h2>
+      <div class="dan">
+        <p>Говорю коллеге Йонасу, <span class="de" style="color:#fff">wenn du viele Süßigkeiten isst, wirst du dick</span>.</p>
+        <p>Имел в виду людей вообще. Как в русском: когда ты ешь много сладкого, ты толстеешь.</p>
+        <p>Йонас смотрит на свой круассан. Смотрит на меня. Говорит, это ты сейчас про меня?</p>
+        <p>Круассан он доел. Со мной до обеда не разговаривал.</p>
+        <p>В русском «ты» бывает про всех. В немецком <span class="hl" style="color:var(--ink)">du</span> — всегда лично собеседник. Хочешь про людей вообще — говори man.</p>
+      </div>
+    </div>
+    <div class="card rv">
+      <div class="toggle" id="toggle">
+        <span class="knob" aria-hidden="true"></span>
+        <button aria-pressed="true" data-mode="du">Через du</button>
+        <button aria-pressed="false" data-mode="man">Через man</button>
+      </div>
+      <div class="chat" id="chat" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STEP 5: SIGNS + BUILDER ============ -->
+<section class="sec" id="s5">
+  <div class="step-head">
+    <span class="step-no">Шаг 5</span>
+    <h2 class="h2">Man и таблички</h2>
+    <div class="dan">
+      <p>Немцы любят таблички. Табличка — это правило. Правило — для всех. «Для всех» по-немецки — man. Круг замкнулся.</p>
+      <p>Man + <b>darf / kann / muss / soll</b> — это язык правил. Выбери табличку и собери фразу.</p>
+    </div>
+  </div>
+  <div class="card rv">
+    <div class="signs" role="group" aria-label="Таблички">
+      <button class="sg" aria-pressed="true" data-s="0">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="26" fill="#fff" stroke="#e2543a" stroke-width="5"/><path d="M12 36c5-4 8-4 12 0s8 4 12 0 8-4 12 0" fill="none" stroke="#1f3fd4" stroke-width="4" stroke-linecap="round"/><circle cx="30" cy="22" r="5" fill="#1f3fd4"/><path d="M13 13l34 34" stroke="#e2543a" stroke-width="5"/></svg>
+        <span>darf nicht</span>
+      </button>
+      <button class="sg" aria-pressed="false" data-s="1">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><rect x="6" y="6" width="48" height="48" rx="10" fill="#1f3fd4"/><path d="M22 44V16h11a8 8 0 0 1 0 16H22" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/></svg>
+        <span>kann</span>
+      </button>
+      <button class="sg" aria-pressed="false" data-s="2">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M8 14c8-4 16-4 22 2 6-6 14-6 22-2v34c-8-4-16-4-22 2-6-6-14-6-22-2Z" fill="#fff" stroke="#1f3fd4" stroke-width="4" stroke-linejoin="round"/><path d="M30 16v34" stroke="#1f3fd4" stroke-width="4"/></svg>
+        <span>muss</span>
+      </button>
+      <button class="sg" aria-pressed="false" data-s="3">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><rect x="12" y="6" width="36" height="48" rx="6" fill="#fff" stroke="#1f3fd4" stroke-width="4"/><path d="M20 20h20M20 30h20M20 40h12" stroke="#87AFEA" stroke-width="4" stroke-linecap="round"/><path d="m36 42 4 4 8-10" fill="none" stroke="#e2543a" stroke-width="4" stroke-linecap="round"/></svg>
+        <span>soll</span>
+      </button>
+    </div>
+    <div class="builder">
+      <div class="line" id="line" aria-label="Собранная фраза"></div>
+      <div class="tray" id="tray" aria-label="Слова"></div>
+      <div class="build-out">
+        <div class="ru" id="buildRu">Собери фразу из слов выше.</div>
+        <div class="muted" id="buildNote"></div>
+      </div>
+      <div class="formula" aria-label="Формула"><span>место / время</span>+<span>модальный</span>+<span class="fm">man</span>+<span>…</span>+<span>инфинитив в конце</span></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-peach" id="buildBtn">Собрать фразу</button>
+        <button class="btn btn-ghost" id="buildSay" aria-label="Прослушать фразу"><svg width="18" height="18"><use href="#spk"/></svg>Слушать</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STEP 6: QUIZ ============ -->
+<section class="sec" id="s6">
+  <div class="two">
+    <div class="step-head">
+      <span class="step-no">Шаг 6</span>
+      <h2 class="h2">Проверка от хаусмайстера</h2>
+      <div class="dan"><p>Пять вопросов. Хаусмайстер следит. Фрау Хубер тоже.</p></div>
+    </div>
+    <div class="card quiz rv" id="quiz">
+      <div class="bar"><i id="qbar"></i></div>
+      <p class="kicker" id="qno">Вопрос 1 из 5</p>
+      <p class="qtext" id="qtext"></p>
+      <div class="opts" id="opts"></div>
+      <p class="fb" id="fb" aria-live="polite"></p>
+      <button class="btn btn-peach q-next" id="qnext" hidden>Дальше</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHEAT SHEET ============ -->
+<section class="sec" id="cheat">
+  <div class="card rv">
+    <p class="kicker">Сохрани</p>
+    <h2 class="h3">Шпаргалка</h2>
+    <div class="cheat">
+      <div class="li"><span class="k">man</span><span class="v">люди вообще: «кто-то», «все», «они»</span></div>
+      <div class="li"><span class="k">man isst</span><span class="v">спрягаем как er / sie / es</span></div>
+      <div class="li"><span class="k">≠ der Mann</span><span class="v">одна n, маленькая буква, без артикля</span></div>
+      <div class="li"><span class="k">«ты» про всех</span><span class="v">по-немецки man, не du</span></div>
+      <div class="li"><span class="k">+ darf / kann</span><span class="v">правила и таблички: нельзя, можно</span></div>
+      <div class="li"><span class="k">+ muss / soll</span><span class="v">надо, так положено</span></div>
+    </div>
+  </div>
+  <p class="outro">Табличку в подъезде я теперь понимаю.<small>Курить, кстати, бросил. Man soll nicht rauchen.</small></p>
+</section>
+
+<!-- ================= AD ================= -->
+<div class="divider">Это был один гайд</div>
+
+<section class="ad-hero" id="stellas">
+  <svg class="deco plane float" aria-hidden="true"><use href="#plane"/></svg>
+  <svg class="deco bfly float d2" aria-hidden="true"><use href="#bfly"/></svg>
+  <p class="kicker">Платформа · A0 — C1</p>
+  <h2 class="mega2">Stellas</h2>
+  <div class="pill">340+ таких гайдов</div>
+</section>
+
+<section class="sec pain">
+  <div class="card rv">
+    <p class="kicker">Ещё одна история</p>
+    <div class="story-lines">
+      <p>У меня была папка «Немецкий». В телеграме, в «Избранном».</p>
+      <p>Я туда сохранял всё. Пост про артикли. Видео про Perfekt. Список «500 слов, которые нужны каждому». Подкаст, который обязательно послушаю в воскресенье.</p>
+      <p>Через год в папке было 400 сохранёнок. Открыл я из них семь.</p>
+      <p>Грамматику я знал кусками. Как карту метро, где половину станций кто-то закрасил.</p>
+      <p>Потом пошёл в разговорный клуб. Правило про Dativ я знал. Открыл рот. Сказал «äh».</p>
+      <p>Правило, кстати, лежало в сохранёнках.</p>
+      <p class="punch">Поэтому мы собрали не ещё одну сохранёнку. А систему.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <h2 class="h3">Узнаёшь себя?</h2>
+  <div class="pains">
+    <div class="pn rv"><span class="was">20 каналов, 6 приложений, и ни одно не говорит, что учить следующим.</span><span class="now">Одна платформа от A0 до C1. Каждая тема стоит на своём месте, по порядку.</span></div>
+    <div class="pn rv"><span class="was">Правило понимаешь. В разговоре молчишь.</span><span class="now">Гайды в Gemini: диалоги с озвучкой, собираешь фразы руками, болтаешь с ИИ-собеседником в роли.</span></div>
+    <div class="pn rv"><span class="was">Час с репетитором стоит как хороший ужин. Каждую неделю.</span><span class="now">30 € один раз. Доступ навсегда. Обновления бесплатно.</span></div>
+    <div class="pn rv"><span class="was">Экзамен через два месяца, а ты даже не видел формат.</span><span class="now">Раздел экзаменов: Goethe, telc, ÖSD, DTZ, TestDaF.</span></div>
+    <div class="pn rv"><span class="was">Слова учишь в понедельник, к пятнице их уже нет.</span><span class="now">7500+ слов с озвучкой и транскрипцией, флеш-карты и трекер.</span></div>
+    <div class="pn rv"><span class="was">В U-Bahn нет сети, и урок на этом заканчивается.</span><span class="now">Платформа в Notion. Работает офлайн на телефоне и ноутбуке.</span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="card is rv">
+    <svg class="deco mic float" aria-hidden="true"><use href="#mic"/></svg>
+    <h2 class="h2">Stellas — это</h2>
+    <div class="feat">
+      <div class="ft"><i><svg viewBox="0 0 24 24" fill="none" stroke="#1f3fd4" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></i><span><b>Гайды как этот.</b> Объяснение, видео, упражнения и наш разбор каждого ответа.</span></div>
+      <div class="ft"><i><svg viewBox="0 0 24 24" fill="#1f3fd4"><use href="#spk"/></svg></i><span><b>Всё звучит.</b> Слова, примеры, диалоги с озвучкой. Немецкий учится ушами.</span></div>
+      <div class="ft"><i><svg viewBox="0 0 24 24" fill="none" stroke="#1f3fd4" stroke-width="2"><path d="M4 18V6M4 18h16M8 14l4-4 3 3 5-6"/></svg></i><span><b>Трекер прогресса.</b> Ставишь цель, проходишь темы, видишь, где ты сейчас.</span></div>
+      <div class="ft"><i><svg viewBox="0 0 24 24" fill="none" stroke="#1f3fd4" stroke-width="2"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></i><span><b>Фильмы, книги, подкасты.</b> Уже рассортированы по уровню. Не надо искать.</span></div>
+    </div>
+    <div class="cta-center"><a class="btn btn-peach" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Забрать доступ</a></div>
+  </div>
+
+  <div class="stats">
+    <div class="card bigstat rv">
+      <span class="n">340+</span><span class="d">гайдов от A0 до C1. Грамматика, лексика, реальные фразы.</span>
+      <div class="mini">
+        <div><b>7500+</b>слов с озвучкой</div>
+        <div><b>100+</b>студентов в наших разговорных клубах</div>
+        <div><b>5</b>экзаменов: Goethe, telc, ÖSD, DTZ, TestDaF</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="show">
+  <p class="kicker">Смотри сам</p>
+  <h2 class="h2">Что внутри</h2>
+  <div class="show-tabs" role="tablist" aria-label="Демо">
+    <button class="stab" role="tab" aria-selected="true" data-i="0">Гайд в Gemini</button>
+    <button class="stab" role="tab" aria-selected="false" data-i="1">Артикли-игра</button>
+    <button class="stab" role="tab" aria-selected="false" data-i="2">Модальные глаголы</button>
+    <button class="stab" role="tab" aria-selected="false" data-i="3">Платформа в Notion</button>
+  </div>
+  <div class="stage">
+    <div class="laptop"><video id="stageVid" muted loop playsinline preload="none" poster="media/gemini.jpg"><source src="media/gemini.mp4" type="video/mp4"></video></div>
+    <div class="stage-cap" id="stageCap"><b>Интерактивный гайд</b>Словарь с озвучкой и транскрипцией, аутентичный текст, три диалога, тест с разбором и чат с ИИ в роли собеседника.</div>
+  </div>
+
+  <div class="phone-row">
+    <div class="phone rv">
+      <video muted loop playsinline preload="none" poster="media/app.jpg" class="lazyv"><source src="media/app.mp4" type="video/mp4"></video>
+      <span class="tag t1">der · die · das</span>
+      <span class="tag t2">озвучка</span>
+      <span class="tag t3">с телефона</span>
+    </div>
+    <div>
+      <h3 class="h3">Каждый гайд — пять шагов</h3>
+      <div class="inside">
+        <div class="in-step"><span class="no">1</span><div><b>Словарь</b><span>20+ слов и 15 фраз. Транскрипция, примеры в контексте, кнопка озвучки у каждого.</span></div></div>
+        <div class="in-step"><span class="no">2</span><div><b>Аутентичный текст</b><span>Как статья из немецкой газеты. Тапаешь предложение — видишь перевод.</span></div></div>
+        <div class="in-step"><span class="no">3</span><div><b>Три диалога</b><span>От обычного разговора до конфликта. Каждую реплику можно прослушать.</span></div></div>
+        <div class="in-step"><span class="no">4</span><div><b>Тест</b><span>Не просто галочка. Разбор, почему именно так.</span></div></div>
+        <div class="in-step"><span class="no">5</span><div><b>Чат с ИИ</b><span>Пишешь по-немецки, собеседник отвечает в образе. Практика без преподавателя.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <p class="kicker">Скриншоты платформы</p>
+  <div class="shots">
+    <figure><img loading="lazy" src="media/p1-home.jpg" alt="Главная страница платформы A0–A2"><figcaption>Главная: навигация по уровням</figcaption></figure>
+    <figure><img loading="lazy" src="media/p2-guides.jpg" alt="Список гайдов по грамматике"><figcaption>Грамматика по порядку</figcaption></figure>
+    <figure><img loading="lazy" src="media/p8-situations.jpg" alt="Лексика по ситуациям: больница, покупки"><figcaption>Лексика для жизни: врач, магазин, касса</figcaption></figure>
+    <figure><img loading="lazy" src="media/p7-work.jpg" alt="Работа, документы, госорганы"><figcaption>Работа и документы</figcaption></figure>
+    <figure><img loading="lazy" src="media/p4-words.jpg" alt="Карточки слов с озвучкой"><figcaption>Слова с озвучкой</figcaption></figure>
+    <figure><img loading="lazy" src="media/p5-builder.jpg" alt="Sentence Builder"><figcaption>Собери фразу сам</figcaption></figure>
+    <figure><img loading="lazy" src="media/p6-tracker.jpg" alt="Трекер прогресса"><figcaption>Трекер прогресса</figcaption></figure>
+  </div>
+</section>
+
+<section class="sec">
+  <h2 class="h2" style="text-align:center">Для кого</h2>
+  <div class="whom">
+    <div class="wh rv">
+      <div class="orb"><svg class="main" viewBox="0 0 80 80" aria-hidden="true"><path d="M10 38 40 12l30 26v32H10Z" fill="#fff" stroke="#1f3fd4" stroke-width="5" stroke-linejoin="round"/><rect x="32" y="48" width="16" height="22" fill="#1f3fd4"/><rect x="50" y="42" width="10" height="10" fill="#87AFEA"/></svg><span class="bub b1">DE</span><span class="bub b2">AT</span></div>
+      <h4>Уже живёшь там</h4>
+      <p>Германия, Австрия, Швейцария. Хочешь говорить с людьми, а не показывать на всё пальцем.</p>
+    </div>
+    <div class="wh rv">
+      <div class="orb"><svg class="main" viewBox="0 0 80 80" aria-hidden="true"><rect x="16" y="8" width="48" height="64" rx="8" fill="#fff" stroke="#1f3fd4" stroke-width="5"/><path d="M26 26h28M26 38h28M26 50h16" stroke="#87AFEA" stroke-width="5" stroke-linecap="round"/><path d="m44 58 6 6 12-14" fill="none" stroke="#F5C8A9" stroke-width="6" stroke-linecap="round"/></svg><span class="bub b1">B1</span><span class="bub b2">C1</span></div>
+      <h4>Идёшь на экзамен</h4>
+      <p>Goethe, telc, ÖSD, DTZ, TestDaF. Темы, формат и лексика в одном месте.</p>
+    </div>
+    <div class="wh rv">
+      <div class="orb"><svg class="main" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 70V38" stroke="#1f3fd4" stroke-width="6" stroke-linecap="round"/><path d="M40 42C40 24 28 16 14 16c0 16 10 26 26 26Z" fill="#87AFEA"/><path d="M40 36c0-14 10-22 24-22 0 14-10 22-24 22Z" fill="#1f3fd4"/><rect x="24" y="66" width="32" height="8" rx="4" fill="#F5C8A9"/></svg><span class="bub b1">A0</span><span class="bub b2">A1</span></div>
+      <h4>Начинаешь с нуля</h4>
+      <p>Алфавит, произношение, первые фразы. Без таблиц на три экрана.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <p class="kicker">Отзывы</p>
+  <h2 class="h3">Пишут те, кто уже внутри</h2>
+  <div class="revs">
+    <img loading="lazy" src="media/rev5.jpg" alt="Отзыв о платформе Stellas">
+    <img loading="lazy" src="media/rev6.jpg" alt="Отзыв о платформе Stellas">
+    <img loading="lazy" src="media/rev2.jpg" alt="Отзыв о платформе Stellas">
+    <img loading="lazy" src="media/rev9.jpg" alt="Отзыв о платформе Stellas">
+    <img loading="lazy" src="media/rev4.jpg" alt="Отзыв о платформе Stellas">
+    <img loading="lazy" src="media/rev3.jpg" alt="Отзыв о платформе Stellas">
+    <img loading="lazy" src="media/rev7.jpg" alt="Отзыв о платформе Stellas">
+    <img loading="lazy" src="media/rev8.jpg" alt="Отзыв о платформе Stellas">
+    <img loading="lazy" src="media/rev1.jpg" alt="Отзыв о платформе Stellas">
+  </div>
+  <p class="swipe">Листай вбок →</p>
+</section>
+
+<section class="sec" id="price">
+  <h2 class="h2" style="text-align:center">Варианты доступа</h2>
+  <div class="plans">
+    <div class="plan rv">
+      <h4>A0 — A2</h4><p class="for">С нуля до уверенной базы</p>
+      <ul>
+        <li>Гайды A0–A2: объяснение, видео, упражнения с разбором</li>
+        <li>Лексика для жизни: врач, магазин, банк, транспорт</li>
+        <li>Слова с озвучкой и транскрипцией</li>
+        <li>Фильмы, книги, подкасты по уровню</li>
+        <li>Трекер прогресса, флеш-карты</li>
+        <li class="no">Гайды B1–C1</li>
+        <li class="no">Украинская версия A0–A2 в подарок</li>
+      </ul>
+      <div class="price">20 €</div><p class="price-note">один раз · навсегда</p>
+      <a class="btn btn-peach btn-wide" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Выбрать</a>
+    </div>
+    <div class="plan best rv">
+      <span class="badge">Выгоднее всего</span>
+      <h4>A0 — C1</h4><p class="for">Весь путь целиком</p>
+      <ul>
+        <li>Все 340+ гайдов от A0 до C1</li>
+        <li>Интерактивные гайды в Gemini с ИИ-чатом</li>
+        <li>Раздел экзаменов: Goethe, telc, ÖSD, DTZ, TestDaF</li>
+        <li>7500+ слов с озвучкой и транскрипцией</li>
+        <li>Фильмы, книги, подкасты, трекер, флеш-карты</li>
+        <li>Украинская версия A0–A2 в подарок</li>
+        <li>Все будущие обновления бесплатно</li>
+      </ul>
+      <div class="price">30 €<s>40 €</s></div><p class="price-note">один раз · навсегда</p>
+      <a class="btn btn-peach btn-wide" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Забрать всё</a>
+    </div>
+    <div class="plan rv">
+      <h4>B1 — C1</h4><p class="for">Для тех, кто уже в теме</p>
+      <ul>
+        <li>Гайды B1–C1: объяснение, видео, упражнения с разбором</li>
+        <li>Экзаменационные темы B2–C1 в Gemini</li>
+        <li>Слова с озвучкой и транскрипцией</li>
+        <li>Фильмы, книги, подкасты по уровню</li>
+        <li>Трекер прогресса, флеш-карты</li>
+        <li class="no">Гайды A0–A2</li>
+        <li class="no">Украинская версия A0–A2 в подарок</li>
+      </ul>
+      <div class="price">20 €</div><p class="price-note">один раз · навсегда</p>
+      <a class="btn btn-peach btn-wide" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Выбрать</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <h2 class="h3">Коротко о главном</h2>
+  <div class="faq">
+    <details><summary>Это подписка?</summary><p>Нет. Платишь один раз, доступ остаётся навсегда.</p></details>
+    <details><summary>Где это всё живёт?</summary><p>Платформа в Notion: ставишь приложение на телефон или ноутбук и заходишь даже офлайн. Интерактивные гайды открываются в Gemini.</p></details>
+    <details><summary>А если выйдут новые гайды?</summary><p>Все обновления для купивших бесплатны. Мы постоянно добавляем темы.</p></details>
+    <details><summary>Остались вопросы</summary><p>Пиши в телеграм: <a href="https://t.me/stellasdeutsch" target="_blank" rel="noopener">@stellasdeutsch</a></p></details>
+  </div>
+</section>
+
+<section class="final">
+  <p class="outro">Сохранёнки я, кстати, удалил.<small>Все 400. Теперь всё лежит в одном месте.</small></p>
+  <a class="btn btn-peach" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Забрать Stellas за 30 €</a>
+</section>
+
+<p class="foot">Stellas · немецкий от A0 до C1</p>
+</div>
+
+<div class="sticky" id="sticky"><a class="btn btn-peach" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Stellas A0–C1 · 30 € навсегда</a></div>
+
+<script>
+(function(){
+  const RM = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = (s, r=document) => r.querySelector(s);
+  const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+
+  /* speech */
+  function say(t){
+    try{
+      if(!('speechSynthesis' in window)) return;
+      const u = new SpeechSynthesisUtterance(t); u.lang='de-DE'; u.rate=.9;
+      const v = speechSynthesis.getVoices().find(v=>/^de/i.test(v.lang)); if(v) u.voice=v;
+      speechSynthesis.cancel(); speechSynthesis.speak(u);
+    }catch(e){}
+  }
+
+  /* FLIP helper */
+  function flip(els, mutate){
+    const first = new Map(els.map(e=>[e,e.getBoundingClientRect()]));
+    mutate();
+    if(RM) return;
+    els.forEach((e,i)=>{
+      const a=first.get(e), b=e.getBoundingClientRect();
+      const dx=a.left-b.left, dy=a.top-b.top;
+      if(!dx && !dy) return;
+      e.animate([{transform:`translate(${dx}px,${dy}px)`},{transform:'none'}],{duration:620,delay:i*45,easing:'cubic-bezier(.3,1.25,.45,1)',fill:'backwards'});
+    });
+  }
+
+  /* reveal */
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{rootMargin:'0px 0px -12% 0px'});
+    $$('.rv').forEach(el=>{ const r=el.getBoundingClientRect(); if(r.top>innerHeight) io.observe(el); });
+  }
+
+  /* STEP 1 morph */
+  const morph=$('#morph'), mBtn=$('#morphBtn'), mCap=$('#morphCap'), dots=$$('.dots i',morph);
+  const caps=[
+    'Жил-был <b>der Mann</b>. Мужчина. Один. Конкретный. С артиклем.',
+    'Потом у него отвалился артикль. Сначала было жалко. Потом привык.',
+    'Потом отвалилась одна <b>n</b>. И заглавная буква. Стал просто <b>man</b>.',
+    'И заодно отвалился пол. Теперь <b>man</b> — это кто угодно. Мужчины, женщины, дети, фрау Хубер. Её такса.'
+  ];
+  let ms=0;
+  function setMorph(n){
+    ms=n; morph.className=morph.className.replace(/\bs\d\b/,'s'+n);
+    dots.forEach((d,i)=>d.classList.toggle('on',i===n));
+    mCap.innerHTML=caps[n];
+    mBtn.textContent = n===3 ? 'Ещё раз' : 'Дальше';
+  }
+  mBtn.addEventListener('click',()=>setMorph(ms===3?0:ms+1));
+
+  /* STEP 2 flips */
+  $$('.flip').forEach(f=>{
+    const b=$('.flip-in',f);
+    b.addEventListener('click',e=>{
+      if(e.target.closest('[data-say]')){ say(f.dataset.de); return; }
+      f.classList.toggle('open');
+    });
+  });
+
+  /* STEP 3 conjugation */
+  const V={
+    essen:[['ess','e'],['iss','t'],['iss','t'],['ess','en'],['ess','t'],['ess','en']],
+    sprechen:[['sprech','e'],['sprich','st'],['sprich','t'],['sprech','en'],['sprech','t'],['sprech','en']],
+    rauchen:[['rauch','e'],['rauch','st'],['rauch','t'],['rauch','en'],['rauch','t'],['rauch','en']],
+    fahren:[['fahr','e'],['fähr','st'],['fähr','t'],['fahr','en'],['fahr','t'],['fahr','en']]
+  };
+  const rows=$$('#conj .r'), chip=$('#manChip'), slot=$('#slot'), bench=$('#bench'), seatBtn=$('#seatBtn');
+  let verb='essen', seated=false;
+  function fillVerb(anim){
+    rows.forEach((r,i)=>{
+      const f=$('.f',r), [st,en]=V[verb][i];
+      f.innerHTML=`${st}<span class="end">${en}</span>`;
+      if(anim){ f.classList.remove('swap'); void f.offsetWidth; f.classList.add('swap'); f.style.animationDelay=(i*50)+'ms'; }
+    });
+    $('.warn .x').textContent='man '+V[verb][5].join('');
+    $('.warn .ok').textContent='man '+V[verb][2].join('');
+  }
+  fillVerb(false);
+  $$('.vchip').forEach(b=>b.addEventListener('click',()=>{
+    $$('.vchip').forEach(x=>x.setAttribute('aria-pressed', x===b));
+    verb=b.dataset.v; fillVerb(true);
+  }));
+  seatBtn.addEventListener('click',()=>{
+    const target=$('#conj .target');
+    if(!seated){
+      flip([chip],()=>slot.appendChild(chip));
+      bench.querySelector('p').textContent='сел. молчит. спрягается как er.';
+      setTimeout(()=>{ target.classList.add('lit'); const f=$('.f',target); f.classList.remove('swap'); void f.offsetWidth; f.classList.add('swap'); f.style.animationDelay='0ms'; }, RM?0:520);
+      seatBtn.textContent='Вернуть на скамейку'; seated=true;
+    }else{
+      target.classList.remove('lit');
+      flip([chip],()=>bench.insertBefore(chip,bench.firstChild));
+      bench.querySelector('p').textContent='ждёт своё место в таблице';
+      seatBtn.textContent='Посадить man'; seated=false;
+    }
+  });
+
+  /* STEP 4 chat */
+  const chat=$('#chat'), tog=$('#toggle');
+  const SC={
+    du:[
+      {me:1,t:'Wenn <b>du</b> viele Süßigkeiten isst, wirst <b>du</b> dick.',r:'Когда ты ешь много сладкого, ты толстеешь.'},
+      {me:0,t:'Wie bitte? <b>Ich</b> werde dick?',r:'Простите? Это я толстею?'},
+      {me:0,t:'Und du? Du wirst nicht dick?',r:'А ты, значит, не толстеешь?'},
+      {v:'bad',t:'Йонас обиделся. До обеда.'}
+    ],
+    man:[
+      {me:1,t:'Wenn <b>man</b> viele Süßigkeiten isst, wird <b>man</b> dick.',r:'Когда ешь много сладкого, толстеешь.'},
+      {me:0,t:'Stimmt. Leider.',r:'Правда. К сожалению.'},
+      {me:0,t:'Willst du ein Croissant?',r:'Круассан будешь?'},
+      {v:'good',t:'Мир. Дружба. Круассан.'}
+    ]
+  };
+  let chatRun=0;
+  function runChat(mode){
+    const id=++chatRun; chat.innerHTML='';
+    tog.classList.toggle('man',mode==='man');
+    $$('button',tog).forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===mode));
+    const steps=SC[mode]; let i=0;
+    const next=()=>{
+      if(id!==chatRun||i>=steps.length) return;
+      const s=steps[i++];
+      if(s.v){ const d=document.createElement('div'); d.className='verdict '+s.v; d.textContent=s.t; chat.appendChild(d); return; }
+      const go=()=>{
+        if(id!==chatRun) return;
+        const d=document.createElement('div'); d.className='msg '+(s.me?'me':'them');
+        d.innerHTML=(s.me?'':'<span class="nm">Jonas</span>')+s.t+`<small>${s.r}</small>`;
+        chat.appendChild(d); setTimeout(next, RM?0:700);
+      };
+      if(!s.me && !RM){ const ty=document.createElement('div'); ty.className='typing'; ty.innerHTML='<i></i><i></i><i></i>'; chat.appendChild(ty); setTimeout(()=>{ty.remove();go();},900); }
+      else go();
+    };
+    next();
+  }
+  $$('button',tog).forEach(b=>b.addEventListener('click',()=>runChat(b.dataset.mode)));
+  let chatStarted=false;
+  const startChat=()=>{ if(!chatStarted){ chatStarted=true; runChat('du'); } };
+  if('IntersectionObserver' in window){
+    const ci=new IntersectionObserver(es=>{ if(es.some(e=>e.isIntersecting)){ startChat(); ci.disconnect(); } },{threshold:.35});
+    ci.observe(chat);
+  } else startChat();
+
+  /* STEP 5 builder */
+  const S=[
+    {tok:['Hier','darf','man','nicht','schwimmen.'],mix:[3,4,0,2,1],ru:'Здесь нельзя плавать.',note:'dürfen — разрешено или запрещено правилами. С nicht — нельзя.'},
+    {tok:['Hier','kann','man','parken.'],mix:[3,2,0,1],ru:'Здесь можно парковаться.',note:'können — есть возможность. Место есть, табличка разрешает.'},
+    {tok:['Man','muss','viel','lernen.'],mix:[2,3,1,0],ru:'Нужно много учиться.',note:'müssen — надо. Без вариантов. Как с Dativ.'},
+    {tok:['Man','soll','die','Hausaufgaben','machen.'],mix:[3,4,2,0,1],ru:'Нужно делать домашку.',note:'sollen — так положено. Кто-то сказал: учитель, врач, мама.'}
+  ];
+  const line=$('#line'), tray=$('#tray'), bRu=$('#buildRu'), bNote=$('#buildNote'), bBtn=$('#buildBtn');
+  let cur=0, built=false;
+  function cls(w,i,s){ const l=w.toLowerCase(); if(l==='man') return 'tok man'; if(/^(darf|kann|muss|soll)$/.test(l)) return 'tok mod'; if(i===s.tok.length-1) return 'tok inf'; return 'tok'; }
+  function loadSign(n){
+    cur=n; built=false; const s=S[n];
+    line.innerHTML=''; tray.innerHTML='';
+    s.mix.forEach(i=>{ const b=document.createElement('span'); b.className=cls(s.tok[i],i,s); b.textContent=s.tok[i]; b.dataset.i=i; tray.appendChild(b); });
+    bRu.textContent='Слова перепутались. Собери фразу.'; bNote.textContent=''; bBtn.textContent='Собрать фразу';
+  }
+  function build(){
+    const s=S[cur];
+    if(built){ loadSign(cur); return; }
+    const toks=$$('.tok',tray).sort((a,b)=>a.dataset.i-b.dataset.i);
+    flip(toks,()=>toks.forEach(t=>line.appendChild(t)));
+    built=true;
+    setTimeout(()=>{ bRu.textContent=s.ru; bNote.textContent=s.note; }, RM?0:450);
+    bBtn.textContent='Перемешать';
+  }
+  $$('.sg').forEach(b=>b.addEventListener('click',()=>{
+    $$('.sg').forEach(x=>x.setAttribute('aria-pressed',x===b)); loadSign(+b.dataset.s);
+  }));
+  bBtn.addEventListener('click',build);
+  $('#buildSay').addEventListener('click',()=>say(S[cur].tok.join(' ')));
+  loadSign(0);
+
+  /* STEP 6 quiz */
+  const Q=[
+    {q:'In Österreich spricht <span class="gap">___</span> Deutsch.',o:['man','Mann','du'],a:0,ex:'Говорят все, люди вообще — значит <b>man</b>.'},
+    {q:'Der <span class="gap">___</span> an der Kasse ist sehr nett.',o:['man','Mann'],a:1,ex:'Конкретный мужчина на кассе — <b>der Mann</b>. Две n, заглавная, с артиклем.'},
+    {q:'In China <span class="gap">___</span> man viel Reis.',o:['essen','isst','esse'],a:1,ex:'man спрягается как er / sie / es: <b>man isst</b>.'},
+    {q:'Hier <span class="gap">___</span> man nicht parken.',o:['dürfen','darfst','darf'],a:2,ex:'Модальный глагол тоже в форме er: <b>man darf</b>.'},
+    {q:'«Когда много работаешь, устаёшь». Про людей вообще:',o:['Wenn du viel arbeitest, wirst du müde.','Wenn man viel arbeitet, wird man müde.'],a:1,ex:'Обобщённое «ты» — это <b>man</b>. Иначе Йонас опять решит, что это про него.'}
+  ];
+  const good=['Да. Хаусмайстер кивнул.','Верно. Фрау Хубер одобряет.','Точно. Такса довольна.','Да. Йонас даже поделился круассаном.','В точку. Табличка гордится тобой.'];
+  const bad=['Мимо. Хаусмайстер вышел из подъезда.','Нет. Фрау Хубер качает головой.','Не то. Такса гавкнула.','Нет. Где-то грустит один der Mann.','Мимо. Йонас снова обиделся.'];
+  let qi=0, score=0;
+  const qtext=$('#qtext'), opts=$('#opts'), fb=$('#fb'), qnext=$('#qnext'), qbar=$('#qbar'), qno=$('#qno');
+  function showQ(){
+    const q=Q[qi]; qno.textContent=`Вопрос ${qi+1} из ${Q.length}`; qtext.innerHTML=q.q; fb.innerHTML=''; qnext.hidden=true;
+    qbar.style.width=(qi/Q.length*100)+'%';
+    opts.innerHTML='';
+    q.o.forEach((o,i)=>{ const b=document.createElement('button'); b.className='opt'; b.textContent=o; b.addEventListener('click',()=>pick(i,b)); opts.appendChild(b); });
+  }
+  function pick(i,b){
+    const q=Q[qi], all=$$('.opt',opts);
+    all.forEach(x=>x.disabled=true);
+    all[q.a].classList.add('right');
+    if(i===q.a){ score++; fb.innerHTML=`<b>${good[qi]}</b> ${q.ex}`; }
+    else { b.classList.add('wrong'); fb.innerHTML=`<b>${bad[qi]}</b> ${q.ex}`; }
+    const g=qtext.querySelector('.gap'); if(g) g.textContent=q.o[q.a];
+    qbar.style.width=((qi+1)/Q.length*100)+'%';
+    qnext.hidden=false; qnext.textContent= qi===Q.length-1 ? 'Результат' : 'Дальше';
+  }
+  function finish(){
+    qno.textContent='Готово';
+    const msg = score===5 ? 'Хаусмайстер пожал тебе руку. Впервые за 12 лет.' : score>=3 ? 'Хаусмайстер доволен. Почти. Перечитай шпаргалку ниже.' : 'Хаусмайстер повесил ещё одну табличку. Пройди шаги заново.';
+    qtext.innerHTML=`${score} из ${Q.length}`;
+    opts.innerHTML=''; fb.innerHTML=msg;
+    qnext.hidden=false; qnext.textContent='Пройти ещё раз';
+  }
+  qnext.addEventListener('click',()=>{
+    if(qno.textContent==='Готово'){ qi=0; score=0; showQ(); return; }
+    qi++; if(qi<Q.length) showQ(); else finish();
+  });
+  showQ();
+
+  /* showcase tabs */
+  const SH=[
+    {v:'gemini',t:'Интерактивный гайд',d:'Словарь с озвучкой и транскрипцией, аутентичный текст, три диалога, тест с разбором и чат с ИИ в роли собеседника.'},
+    {v:'game',t:'Артикли как игра',d:'Herr Der, Frau Die и Baby Das. Род существительных запоминается через героев и мини-игру.'},
+    {v:'modal',t:'Модальные глаголы',d:'Шкала уверенности: от «точно» до «вряд ли». Тот самый уровень B2–C1, который нужен на экзамене.'},
+    {v:'notion',t:'Платформа в Notion',d:'Все гайды по порядку, от алфавита до C1. Работает офлайн с телефона и ноутбука.'}
+  ];
+  const sv=$('#stageVid'), sc=$('#stageCap');
+  $$('.stab').forEach(b=>b.addEventListener('click',()=>{
+    $$('.stab').forEach(x=>x.setAttribute('aria-selected',x===b));
+    const s=SH[+b.dataset.i];
+    sv.poster=`media/${s.v}.jpg`; sv.querySelector('source').src=`media/${s.v}.mp4`; sv.load(); sv.play().catch(()=>{});
+    sc.innerHTML=`<b>${s.t}</b>${s.d}`;
+  }));
+
+  /* lazy autoplay videos */
+  const vids=[sv,...$$('.lazyv')];
+  if('IntersectionObserver' in window){
+    const vo=new IntersectionObserver(es=>es.forEach(e=>{ const v=e.target; if(e.isIntersecting){ v.preload='auto'; v.play().catch(()=>{}); } else v.pause(); }),{threshold:.3});
+    vids.forEach(v=>vo.observe(v));
+  }
+
+  /* sticky CTA: visible inside the ad, hidden at pricing/final */
+  const sticky=$('#sticky'), adStart=$('#stellas'), price=$('#price');
+  function st(){
+    const a=adStart.getBoundingClientRect().top, p=price.getBoundingClientRect().top;
+    sticky.classList.toggle('show', a<innerHeight*.4 && p>innerHeight*.9);
+  }
+  addEventListener('scroll',st,{passive:true}); st();
+})();
+</script>
+
+</body>
+</html>
